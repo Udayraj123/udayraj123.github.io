@@ -102,8 +102,8 @@
 					<div class="col-md-8 col-md-offset-2 text-center">
 						<div class="display-t">
 							<div class="display-tc animate-box" data-animate-effect="fadeIn">
-								<h1>This site under developement</h1>
-								<h2>until then, you can have a look at <a href="https://udayrajon.wordpress.com">my blog</a> :)</h2>
+								<h1>SORRY !</h1>
+								<h2>The site is under developement until then, you can have a look at <a href="https://udayrajon.wordpress.com">my blog</a> :)</h2>
 <!-- 								<h1>Make it a lifestyle, not a duty</h1> -->
 							</div>
 						</div>
@@ -111,7 +111,7 @@
 				</div>
 			</div>
 		</header>
-<!-- 
+<?php/*
 		<div id="fh5co-trainer">
 			<div class="container">
 				<div class="row">
@@ -705,7 +705,8 @@
 	</div>
 </footer>
 </div>
--->
+*/ 
+?>
 <div class="gototop js-top">
 	<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 </div>
