@@ -111,7 +111,7 @@
 				</div>
 			</div>
 		</header>
-<?php/*
+
 		<div id="fh5co-trainer">
 			<div class="container">
 				<div class="row">
@@ -575,8 +575,9 @@
 				</div>
 			</div>
 		</div>
- -->
-	<!-- <div id="fh5co-gallery">
+ 
+	<!-- 
+<div id="fh5co-gallery">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
@@ -704,10 +705,8 @@
 
 	</div>
 </footer>
-
-*/ 
-?>
 </div>
+-->
 	<div class="gototop js-top">
 	<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 </div>
