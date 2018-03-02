@@ -11,7 +11,8 @@ module.exports = function (grunt) {
         flatten: true,
         // header.html, footer.html, etc common partials
         partials: 'www/partials/*.html',
-        homePageUrl:'http://udayraj123.github.io', //for gview
+        homePageUrl:'http://udayraj123.github.io', //for pdf viewing
+        // homePageUrl:'localhost:8000', //for pdf viewing
         assets: 'assets',                 //folder(without a trailing '/') containing your css,js files as well as data files like .pdf
         layoutdir: 'www/layouts',         //the directory to find below file
         layout: 'master_layout.html',     // contains outermost covering layout. 
@@ -21,7 +22,6 @@ module.exports = function (grunt) {
         files:       {/*
         The Syntax is: 
             target     :     [sub_layouts],
-        
         files in sublayouts array can contain different arrangements of these partials like {{> calender}}, feel super creative!
         Currently, they just contain plain html.
         */
