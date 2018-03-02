@@ -11,8 +11,10 @@ module.exports = function (grunt) {
         flatten: true,
         // header.html, footer.html, etc common partials
         partials: 'www/partials/*.html',
-        layoutdir: 'www/layouts',//the directory to find below file
-        layout: 'master_layout.html',// contains outermost covering layout. 
+        homePageUrl:'http://udayraj123.github.io', //for gview
+        assets: 'assets',                 //folder(without a trailing '/') containing your css,js files as well as data files like .pdf
+        layoutdir: 'www/layouts',         //the directory to find below file
+        layout: 'master_layout.html',     // contains outermost covering layout. 
         // Currently it's just {{> header }}{{> body }}{{> footer }}, feel creative!
       },
       compileAllPages:{
