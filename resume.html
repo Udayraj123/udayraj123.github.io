@@ -55,64 +55,117 @@
 	<!--[if lt IE 9]>
 	<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
-	<!-- Github Follow button:  Place this tag in your head or just before your close body tag. -->
-	<script async defer src="https://buttons.github.io/buttons.js"></script>
-</head>
 
-<body>
-	<nav class="fh5co-nav" role="navigation">
-		<div class="top">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 text-right">
-						<ul class="fh5co-social">
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-github"></i></a></li>
-						</ul>
+
+	<!-- jQuery -->
+	<script src="assets/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="assets/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="assets/js/bootstrap.min.js"></script>
+	
+	<style type="text/css">
+		.gridly {
+			position: relative;
+			width: 960px;
+		}
+		.brick{
+			position: absolute;
+			/*Make cursor look like it hovered a link*/
+			cursor: pointer; 
+		}
+		.brick.dragging {
+			opacity: 0.8; 
+		}
+		.brick.small {
+			width: 140px;
+			height: 100px;
+		}
+		.brick.large {
+			width: 300px;
+			height: 300px;
+		}
+
+		.delete{
+			display: block;
+		background: rgba(255, 255, 255, 0.2);
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			text-align: center;
+			top: 2%;
+			color: #FA0;
+			right: 2%;
+		}
+		.click{
+			display: block;
+			position: absolute;
+			color: #FFF;
+			left: 2%;
+		}
+		</style>
+		<link href="assets/gridly/stylesheets/jquery.gridly.css" rel="stylesheet" type="text/css" />
+
+		<link href="assets/lightgallery/src/css/lightgallery.css" rel="stylesheet" type="text/css" />
+
+		<!-- Github Follow button:  Place this tag in your head or just before your close body tag. -->
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
+	</head>
+
+	<body>
+		<nav class="fh5co-nav" role="navigation">
+			<div class="top">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 text-right">
+							<ul class="fh5co-social">
+								<li><a href="#"><i class="icon-facebook"></i></a></li>
+								<li><a href="#"><i class="icon-linkedin"></i></a></li>
+								<li><a href="#"><i class="icon-github"></i></a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="top-menu">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-2">
-						<div id="fh5co-logo"><a href="index.html">Udayraj<span>.</span></a></div>
-					</div>
-					<div class="col-xs-8 text-right menu-1">
-						<ul>
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="resume.html">Resume</a></li>
-							<li><a href="gallery.html">Gallery</a></li>
-							<li class="has-dropdown">
-								<a href="blog.html">Blog</a>
-								<ul class="dropdown">
-									<li><a href="#">Web Design</a></li>
-									<li><a href="#">eCommerce</a></li>
-									<li><a href="#">Branding</a></li>
-									<li><a href="#">API</a></li>
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2">
+							<div id="fh5co-logo"><a href="index.html">Udayraj<span>.</span></a></div>
+						</div>
+						<div class="col-xs-8 text-right menu-1">
+								<ul>
+									<li class="active"><a href="index.html">Home</a></li>
+									<li><a href="about.html">About</a></li>
+									<li><a href="resume.html">Resume</a></li>
+									<li><a href="gallery.html">Gallery</a></li>
+									<li class="has-dropdown">
+										<a href="projects.html">Projects</a>
+										<ul class="dropdown">
+											<li><a href="#">Web Design</a></li>
+											<li><a href="#">eCommerce</a></li>
+											<li><a href="#">Branding</a></li>
+											<li><a href="#">API</a></li>
+										</ul>
+									</li>
+									<li><a href="contact.html">Contact</a></li>
 								</ul>
-							</li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
-					</div>
-					<div class="col-xs-2">
-						<a href="https://stackoverflow.com/users/6242649/udayraj-deshmukh">
-							<img src="https://stackoverflow.com/users/flair/6242649.png?theme=clean" width="208" height="58" alt="profile for Udayraj Deshmukh at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Udayraj Deshmukh at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
-						</a>
+							</div>
+						<div class="col-xs-2">
+							<a href="https://stackoverflow.com/users/6242649/udayraj-deshmukh">
+								<img src="https://stackoverflow.com/users/flair/6242649.png?theme=clean" width="208" height="58" alt="profile for Udayraj Deshmukh at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Udayraj Deshmukh at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+							</a>
 
-						<br>
-						<!-- Place this tag where you want the button to render. -->
-						<a class="github-button" href="https://github.com/udayraj123" data-show-count="true" aria-label="Follow @udayraj123 on GitHub">Follow @udayraj123</a>
-						
+							<br>
+							<!-- Place this tag where you want the button to render. -->
+							<a class="github-button" href="https://github.com/udayraj123" data-show-count="true" aria-label="Follow @udayraj123 on GitHub">Follow @udayraj123</a>
+
+						</div>
 					</div>
+
 				</div>
-
 			</div>
-		</div>
-	</nav>
+		</nav>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12 text-center" align="center">
@@ -251,10 +304,10 @@
 
 		<div class="row copyright">
 			<div class="col-md-12 text-center">
-
 				<a href="https://stackexchange.com/users/8080680">
 					<img src="https://stackexchange.com/users/flair/8080680.png?theme=dark" width="208" height="58" alt="profile for Udayraj Deshmukh on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Udayraj Deshmukh on Stack Exchange, a network of free, community-driven Q&amp;A sites">
 
+					<br>
 					<br>
 					<p>
 						<small class="block">Credits : &copy; 2016 Free HTML5. All Rights Reserved.</small> 
@@ -276,12 +329,7 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
-	<!-- jQuery -->
-	<script src="assets/js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="assets/js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="assets/js/bootstrap.min.js"></script>
+	
 	<!-- Waypoints -->
 	<script src="assets/js/jquery.waypoints.min.js"></script>
 	<!-- Stellar Parallax -->
@@ -292,6 +340,7 @@
 	<script src="assets/js/jquery.countTo.js"></script>
 	<!-- Magnific Popup -->
 	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+
 	<script src="assets/js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="assets/js/main.js"></script>

@@ -25,7 +25,7 @@ module.exports = function (grunt) {
         Currently, they just contain plain html.
         */
           'about.html'    :     ['www/contents/make_about.html'],
-          'blog.html'     :     ['www/contents/make_blog.html'],
+          'projects.html' :     ['www/contents/make_projects.html'],
           'contact.html'  :     ['www/contents/make_contact.html'],
           'gallery.html'  :     ['www/contents/make_gallery.html'],
           'index.html'    :     ['www/contents/make_index.html'],
