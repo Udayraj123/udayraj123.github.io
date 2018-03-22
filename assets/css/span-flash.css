@@ -65,17 +65,17 @@ top:-96px;
 -webkit-transform:perspective(100px) rotateX(20deg);
 transform:perspective(100px) rotateX(20deg);
 }
-span.flash:hover span.develope,span.flash.open span.develope{
+span.flash:hover span.develop,span.flash.open span.develop{
 top:-44px;
 -webkit-transform:perspective(100px) rotateX(-20deg);
 transform:perspective(100px) rotateX(-20deg);
 }
-span.flash:hover span.stumble,span.flash.open span.stumble{
+span.flash:hover span.explore,span.flash.open span.explore{
 -webkit-transform:perspective(100px) rotateX(20deg);
 transform:perspective(100px) rotateX(20deg);
 top:0;
 }
-span.flash:hover span.sketch,span.flash.open span.sketch{
+span.flash:hover span.contribute,span.flash.open span.contribute{
 top:52px;
 -webkit-transform:perspective(100px) rotateX(-20deg);
 transform:perspective(100px) rotateX(-20deg);
