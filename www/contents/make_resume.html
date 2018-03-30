@@ -11,32 +11,32 @@
 					<br>
 				</div> -->
 					<!-- M2: Doesn't work 
-					<iframe src="http://docs.google.com/gview?url={{homePageUrl}}/{{assets}}/150101021_CV.pdf&embedded=true" style="width:55%; height:1000px;" frameborder="0"></iframe> -->
-					
+						<iframe src="http://docs.google.com/gview?url={{homePageUrl}}/{{assets}}/150101021_CV.pdf&embedded=true" style="width:55%; height:1000px;" frameborder="0"></iframe> -->
+						
 					<!-- <canvas id="the-canvas" style="border:1px solid black;"></canvas><br>
 					<p> If the pdf is not visible, please <a href="https://drive.google.com/open?id=0B68BLUW7sVKqU3BKMkIxcDBvRXM">click here</a> to view it</p> 
-					 -->
-						<!-- M3 - Doesn't work on Firefox Linux -->
-						<object data="{{assets}}/150101021_CV.pdf" type="application/pdf" width="55%" height="700px"> 
-							<embed src="{{assets}}/150101021_CV.pdf" type="application/pdf" width="55%" height="700px"
-							alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
-								<p> If the pdf is not visible, please <a href="https://drive.google.com/open?id=0B68BLUW7sVKqU3BKMkIxcDBvRXM">click here</a> to view it</p> 
-							</object>
-						</div>
-					</div>
-				</div>
+				-->
+				<!-- M3 - Doesn't work on Firefox Linux -->
+				<object data="{{assets}}/150101021_CV.pdf" type="application/pdf" width="55%" height="700px"> 
+					<embed src="{{assets}}/150101021_CV.pdf" type="application/pdf" width="55%" height="700px"
+					alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+					<p> If the pdf is not visible, please <a href="https://drive.google.com/open?id=0B68BLUW7sVKqU3BKMkIxcDBvRXM">click here</a> to view it</p> 
+				</object>
 			</div>
+		</div>
+	</div>
+</div>
 
 
-			<div class="gototop js-top">
-				<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-			</div>
+<div class="gototop js-top">
+	<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+</div>
 
-			<!-- Loading Resume pdf (support on all browsers) -->
-			<script src="{{assets}}/pdfjs/build/pdf.js"></script>
-			<!-- <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script> -->
+<!-- Loading Resume pdf (support on all browsers) -->
+<script src="{{assets}}/pdfjs/build/pdf.js"></script>
+<!-- <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script> -->
 
-			<script type="text/javascript">
+<script type="text/javascript">
 				// Taken from: https://github.com/mozilla/pdf.js/tree/master/examples/helloworld
 				// config for loadPDF.js-
 				var pdf_url = '{{homePageUrl}}/{{assets}}/150101021_CV.pdf';
