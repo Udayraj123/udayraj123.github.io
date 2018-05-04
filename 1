@@ -1,0 +1,27 @@
+2018/04/04 15:05:12| Startup: Initializing Authentication Schemes ...
+2018/04/04 15:05:12| Startup: Initialized Authentication Scheme 'basic'
+2018/04/04 15:05:12| Startup: Initialized Authentication Scheme 'digest'
+2018/04/04 15:05:12| Startup: Initialized Authentication Scheme 'negotiate'
+2018/04/04 15:05:12| Startup: Initialized Authentication Scheme 'ntlm'
+2018/04/04 15:05:12| Startup: Initialized Authentication.
+2018/04/04 15:05:12| Processing Configuration File: /etc/squid/squid.conf (depth 0)
+2018/04/04 15:05:12| Processing: auth_param basic program /usr/lib/squid/basic_ncsa_auth /etc/squid/htpasswd
+2018/04/04 15:05:12| Processing: acl allowed_ips src 10.1.2.13-10.1.2.37 172.16.114.238-172.16.114.241 10.1.0.46 10.0.2.77 10.3.1.23 127.0.0.1
+2018/04/04 15:05:12| Processing: acl to_local dstdomain localhost 202.141.80.14 .iitg.ernet.in
+2018/04/04 15:05:12| Processing: acl restWithAuth proxy_auth REQUIRED
+2018/04/04 15:05:12| Processing: http_port 3128
+2018/04/04 15:05:12| Processing: http_access allow allowed_ips
+2018/04/04 15:05:12| Processing: http_access allow restWithAuth
+2018/04/04 15:05:12| Processing: never_direct allow all
+2018/04/04 15:05:12| Processing: always_direct allow to_local
+2018/04/04 15:05:12| Processing: tcp_outgoing_address 0.0.0.0 all
+2018/04/04 15:05:12| Processing: cache_peer 172.16.101.138 parent 3128 0 weight=10 no-query proxy-only login=apurva:saraogi name=techboardNS
+2018/04/04 15:05:12| Processing: cache_effective_user proxy
+2018/04/04 15:05:12| Processing: cache_effective_group proxy
+2018/04/04 15:05:12| Processing: strip_query_terms off
+2018/04/04 15:05:12| Processing: access_log /var/log/squid/access.log common
+2018/04/04 15:05:12| Processing: logformat squid		 %credentials %ts.%03tu %6tr %>a %Ss/%03>Hs %<st %rm %ru %[un %Sh/%<a %mt
+2018/04/04 15:05:12| Processing: logformat common     %>a %[ui %[un [%tl] "%rm %ru HTTP/%rv" %>Hs %<st %Ss:%Sh
+2018/04/04 15:05:12| Processing: logformat combined   %>a %[ui %[un [%tl] "%rm %ru HTTP/%rv" %>Hs %<st "%{Referer}>h" "%{User-Agent}>h" %Ss:%Sh
+2018/04/04 15:05:12| Processing: logformat referrer   %ts.%03tu %>a %{Referer}>h %ru
+2018/04/04 15:05:12| Processing: logformat useragent  %>a [%tl] "%{User-Agent}>h"

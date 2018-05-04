@@ -17,13 +17,15 @@ module.exports = function (grunt) {
         layout: 'master_layout.html',     // contains outermost covering layout. 
         // Currently it's just {{> header }}{{> body }}{{> footer }}, feel creative!
       },
-      compileAllPages:{
-        files:       {/*
-        The Syntax is: 
-            target     :     [sub_layouts],
-        files in sublayouts array can contain different arrangements of these partials like {{> calender}}, feel super creative!
-        Currently, they just contain plain html.
-        */
+      compileMainPages:{
+        files:       {
+          /*
+          The Syntax is: 
+              target     :     [sub_layouts],
+          files in sublayouts array can contain different arrangements of these partials like {{> calender}}, feel super creative!
+          Currently, they just contain plain html.
+          */
+          '404.html'    :     ['www/contents/make_404.html'],
           'about.html'    :     ['www/contents/make_about.html'],
           'projects.html' :     ['www/contents/make_projects.html'],
           'contact.html'  :     ['www/contents/make_contact.html'],
@@ -32,6 +34,14 @@ module.exports = function (grunt) {
           'resume.html'   :     ['www/contents/make_resume.html'],
         },
       },
+    //   compileErrorPages:{
+    //     files:{
+    //       '404.html'    :     ['www/contents/make_404.html'],
+    //     }
+    //     // override task-level layout
+    //     options: {layout: 'errors_layout.html'}, 
+    //   }
+
     }
   });
 
