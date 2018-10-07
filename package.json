@@ -4,7 +4,7 @@
   "description": "",
   "main": "Gruntfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No test required\" && exit 0"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/udayraj123/udayraj123.github.io#readme",
   "devDependencies": {
-    "grunt": "^1.0.2",
-    "grunt-contrib-connect": "^1.0.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "grunt": "^1.0.2",
+    "grunt-assemble": "^0.6.3",
+    "grunt-contrib-connect": "^1.0.2"
+}
 }

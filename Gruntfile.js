@@ -34,6 +34,13 @@ module.exports = function (grunt) {
           'resume.html'   :     ['www/contents/make_resume.html'],
         },
       },
+      compileOtherPages:{
+        files:{
+          'coming_soon.html'    :     ['www/contents/make_coming_soon.html'],
+        },
+        // override task-level layout
+        options: {layout: 'coming_soon.html'}, 
+      }
     //   compileErrorPages:{
     //     files:{
     //       '404.html'    :     ['www/contents/make_404.html'],
