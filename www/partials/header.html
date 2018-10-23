@@ -1,19 +1,53 @@
-<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Udayraj Deshmukh | github.io </title>
+	<title>Udayraj Deshmukh | 
+		{{#is basename "make_index" }}	
+		Home
+		
+		{{else}}
+		{{#is basename "make_resume" }}	
+		
+		Resume
+		
+		{{else}}
+		{{#is basename "make_projects" }}	
+		
+		Projects
+		
+		{{else}}
+		{{#is basename "make_gallery" }}	
+		
+		Gallery
+		
+		{{else}}
+		{{#is basename "make_contact" }}	
+		
+		Contact
+		
+		{{else}}
+		
+		IIT Guwahati
+		
+		{{/is}}
+		{{/is}}
+		{{/is}}
+		{{/is}}
+		{{/is}}
+	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Personal Website of Mr.Udayraj Deshmukh" />
-	<meta name="keywords" content="udayraj,deshmukh,iitg,iit,guwahati,cse,blog,resume" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<meta name="description" content="Udayraj Deshmukh, CSE Batch of 2019, IIT Guwahati" />
+	<meta name="keywords" content="udayraj, deshmukh, iitg, iit, guwahati, cse, blog, resume, website, github" />
 	<meta name="author" content="Udayraj Deshmukh" />
 
 	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
+	<meta property="og:title" content="{{title }}"/>
 	<meta property="og:image" content="{{assets}}/images/udayraj.jpg"/>
 	<meta property="og:url" content="udayraj123.github.io"/>
 	<meta property="og:site_name" content="Udayraj Deshmukh"/>
-	<meta property="og:description" content="Personal Website of Mr.Udayraj Deshmukh"/>
-	<meta name="twitter:title" content="" />
+	<meta property="og:description" content="Udayraj Deshmukh, CSE Batch of 2019, IIT Guwahati"/>
+	<meta name="twitter:title" content="{{title }}" />
 	<meta name="twitter:image" content="" />
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
@@ -28,140 +62,148 @@
 	</script>
 
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
-	
-	<!-- Span flash (from wesbos) -->
-	<link rel="stylesheet" href="{{assets}}/css/span-flash.css">
-	<!-- Animate.css -->
+
+	<!-- Animate.css (part of main)-->
 	<link rel="stylesheet" href="{{assets}}/css/animate.css">
-	<!-- Icomoon Icon Fonts-->
+	
+	<!-- Icomoon Icon Fonts (link icons)-->
 	<link rel="stylesheet" href="{{assets}}/css/icomoon.css">
+
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="{{assets}}/css/bootstrap.css">
+	
+	<!-- Theme style (Main style) -->
+	<link rel="stylesheet" href="assets/css/style.css">
 
 	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="{{assets}}/css/magnific-popup.css">
+	<!-- <link rel="stylesheet" href="{{assets}}/css/magnific-popup.css"> -->
 
 	<!-- Owl Carousel  -->
-	<link rel="stylesheet" href="{{assets}}/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="{{assets}}/css/owl.theme.default.min.css">
+	<!-- <link rel="stylesheet" href="{{assets}}/css/owl.carousel.min.css"> -->
+	<!-- <link rel="stylesheet" href="{{assets}}/css/owl.theme.default.min.css"> -->
 
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="{{assets}}/css/style.css">
+	<!-- Modernizr JS (Reduces lag, Contains fade effect for everything) -->
+	<script src="assets/js/modernizr-2.6.2.min.js"></script>
+	
+	{{#is basename "make_index" }}	
+	<!-- Span flash (from wesbos) -->
+	<link rel="stylesheet" href="{{assets}}/css/span-flash.css">
+	{{/is}}
+	{{#is basename "make_gallery" }}	
+	<link href="{{assets}}/gridly/stylesheets/jquery.gridly.css" rel="stylesheet" type="text/css" />
+	<link href="{{assets}}/lightgallery/src/css/lightgallery.css" rel="stylesheet" type="text/css" />	
+	{{/is}}
 
-	<!-- Modernizr JS -->
-	<script src="{{assets}}/js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="{{assets}}/js/respond.min.js"></script>
-	<![endif]-->
+<![endif]-->
 
+<!-- jQuery -->
+<script src="{{assets}}/js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="{{assets}}/js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="{{assets}}/js/bootstrap.min.js"></script>
 
-	<!-- jQuery -->
-	<script src="{{assets}}/js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="{{assets}}/js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="{{assets}}/js/bootstrap.min.js"></script>
-	
-	<style type="text/css">
-		.gridly {
-			position: relative;
-			width: 960px;
-		}
-		.brick{
-			position: absolute;
-			/*Make cursor look like it hovered a link*/
-			cursor: pointer; 
-		}
-		.brick.dragging {
-			opacity: 0.8; 
-		}
-		.brick.small {
-			width: 140px;
-			height: 100px;
-		}
-		.brick.large {
-			width: 300px;
-			height: 300px;
-		}
+<style type="text/css">
+.gridly {
+	position: relative;
+	width: 960px;
+}
+.brick{
+	position: absolute;
+	/*Make cursor look like it hovered a link*/
+	cursor: pointer; 
+}
+.brick.dragging {
+	opacity: 0.8; 
+}
+.brick.small {
+	width: 140px;
+	height: 100px;
+}
+.brick.large {
+	width: 300px;
+	height: 300px;
+}
 
-		.delete{
-			display: block;
-		background: rgba(255, 255, 255, 0.2);
-			width: 40px;
-			height: 40px;
-			position: absolute;
-			text-align: center;
-			top: 2%;
-			color: #FA0;
-			right: 2%;
-		}
-		.click{
-			display: block;
-			position: absolute;
-			color: #FFF;
-			left: 2%;
-		}
-		</style>
-		<link href="{{assets}}/gridly/stylesheets/jquery.gridly.css" rel="stylesheet" type="text/css" />
+.delete{
+	display: block;
+	background: rgba(255, 255, 255, 0.2);
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	text-align: center;
+	top: 2%;
+	color: #FA0;
+	right: 2%;
+}
+.click{
+	display: block;
+	position: absolute;
+	color: #FFF;
+	left: 2%;
+}
+</style>
 
-		<link href="{{assets}}/lightgallery/src/css/lightgallery.css" rel="stylesheet" type="text/css" />
+<!-- Github Follow button:  Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 
-		<!-- Github Follow button:  Place this tag in your head or just before your close body tag. -->
-		<script async defer src="https://buttons.github.io/buttons.js"></script>
-	</head>
-
-	<body>
-		<nav class="fh5co-nav" role="navigation">
-			<div class="top">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 text-right">
-							<ul class="fh5co-social">
-								<li><a href="https://facebook.com/udayraj.deshmukh"><i class="icon-facebook"></i></a></li>
-								<li><a href="https://www.linkedin.com/in/udayraj123/"><i class="icon-linkedin"></i></a></li>
-								<li><a href="https://github.com/udayraj123/"><i class="icon-github"></i></a></li>
+<nav class="fh5co-nav" role="navigation">
+	<div class="top">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 text-right">
+					<ul class="fh5co-social">
+						<li><a href="https://github.com/udayraj123/" target="_blank"><i class="icon-github"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/udayraj123/" target="_blank"><i class="icon-linkedin"></i></a></li>
+						<li><a href="https://facebook.com/udayraj.deshmukh" target="_blank"><i class="icon-facebook"></i></a></li>
+						<li><a href="https://udayrajon.wordpress.com" target="_blank"><i class="icon-quote"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="top-menu">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2">
+					<div id="fh5co-logo"><a href="index.html">Udayraj<span>.</span></a></div>
+				</div>
+				<div class="col-xs-8 text-right menu-1">
+					<ul>
+						<!-- <li><a href="about.html">About</a></li> -->
+						<li {{#is basename "make_index" }}class="active"{{/is}}><a href="index.html">Home</a></li>
+						<li {{#is basename "make_projects" }}class="active"{{/is}}><a href="projects.html">Projects</a></li>
+						<li {{#is basename "make_resume" }}class="active"{{/is}}><a href="resume.html">Resume</a></li>
+						<!-- <li {{#is basename "make_gallery" }} class="active"{{/is}}><a href="gallery.html">Gallery</a></li> -->
+						<li {{#is basename "make_contact" }}class="active"{{/is}}><a href="contact.html">Contact</a> </li>
+						<!-- <li class="has-dropdown"> 
+							<a {{#is basename "make_gallery" }} class="active"{{/is}} href="gallery.html">Gallery</a>
+							<ul class="dropdown">
+								<li><a href="#">Web Design</a></li>
+								<li><a href="#">eCommerce</a></li>
+								<li><a href="#">Branding</a></li>
+								<li><a href="#">API</a></li>
 							</ul>
-						</div>
-					</div>
-				</div>
+						</li>
+					-->
+				</ul>
 			</div>
-			<div class="top-menu">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-2">
-							<div id="fh5co-logo"><a href="index.html">Udayraj<span>.</span></a></div>
-						</div>
-						<div class="col-xs-8 text-right menu-1">
-								<ul>
-									<li class="active"><a href="index.html">Home</a></li>
-									<li><a href="about.html">About</a></li>
-									<li><a href="resume.html">Resume</a></li>
-									<li><a href="gallery.html">Gallery</a></li>
-									<li class="has-dropdown">
-										<a href="projects.html">Projects</a>
-										<ul class="dropdown">
-											<li><a href="#">Web Design</a></li>
-											<li><a href="#">eCommerce</a></li>
-											<li><a href="#">Branding</a></li>
-											<li><a href="#">API</a></li>
-										</ul>
-									</li>
-									<li><a href="contact.html">Contact</a></li>
-								</ul>
-							</div>
-						<div class="col-xs-2">
-							<a href="https://stackoverflow.com/users/6242649/udayraj-deshmukh">
-								<img src="https://stackoverflow.com/users/flair/6242649.png?theme=clean" width="208" height="58" alt="Udayraj Deshmukh on Stack Overflow" title="Udayraj Deshmukh on Stack Overflow">
-							</a>
+			<div class="col-xs-2">
+				<a href="https://stackoverflow.com/users/6242649/udayraj-deshmukh">
+					<img src="https://stackoverflow.com/users/flair/6242649.png?theme=clean" width="208" height="58" alt="Udayraj on StackOverflow" title="Udayraj on StackOverflow">
+				</a>
 
-							<br>
-							<!-- Place this tag where you want the button to render. -->
-							<a class="github-button" href="https://github.com/udayraj123" data-show-count="true" aria-label="Follow @udayraj123 on GitHub">Follow @udayraj123</a>
+				<br>
+				<!-- Place this tag where you want the button to render. -->
+				<!-- <a class="github-button" href="https://github.com/udayraj123" data-show-count="true" aria-label="Follow udayraj123@GitHub">Follow @udayraj123</a> -->
+				<a class="github-button" href="https://github.com/udayraj123" data-show-count="true" aria-label="Follow udayraj123@GitHub"><i class="icon-github"></i> Follow</a>
 
-						</div>
-					</div>
-
-				</div>
 			</div>
-		</nav>
+		</div>
+
+	</div>
+</div>
+</nav>

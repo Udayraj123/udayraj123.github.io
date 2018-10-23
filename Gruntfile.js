@@ -25,8 +25,7 @@ module.exports = function (grunt) {
           files in sublayouts array can contain different arrangements of these partials like {{> calender}}, feel super creative!
           Currently, they just contain plain html.
           */
-          '404.html'    :     ['www/contents/make_404.html'],
-          'about.html'    :     ['www/contents/make_about.html'],
+          '404.html'    :       ['www/contents/make_404.html'],
           'projects.html' :     ['www/contents/make_projects.html'],
           'contact.html'  :     ['www/contents/make_contact.html'],
           'gallery.html'  :     ['www/contents/make_gallery.html'],
@@ -40,7 +39,16 @@ module.exports = function (grunt) {
         },
         // override task-level layout
         options: {layout: 'coming_soon.html'}, 
-      }
+      },
+
+// Possiblities: Quick compare 
+      // compileVersion2:{
+      //   files:{
+      //     'index_v2.html'    :     ['www/contents/make_index.html'],
+      //   },
+      //   // Use different layout for same data files. Possibly using different headers and footers for theme changes
+      //   options: {layout: 'master_layout_v2.html'}, 
+      // }
     //   compileErrorPages:{
     //     files:{
     //       '404.html'    :     ['www/contents/make_404.html'],

@@ -14,7 +14,7 @@ $(function() {
     last.css('z-index',z_low);
     next.css('z-index',z_high);
     last = next;
-  },800);
+  },1200);
 
   //open and close
   window.setTimeout(function() {

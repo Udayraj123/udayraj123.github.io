@@ -44,7 +44,7 @@ width:100%;
 left:0;
 top:0;
 background:#ecd018;
-transition:top 0.2s;
+transition:top 0.3s;
 -webkit-transform:translateZ(0);
 transform:translateZ(0);
 line-height:50px;
@@ -57,7 +57,7 @@ span.flash:hover,span.flash.open{
 background:none;
 }
 span.flash:hover span,span.flash.open span{
-transition:all 0.2s;
+transition:all 0.3s;
 top:auto;
 }
 span.flash:hover span.design,span.flash.open span.design{
@@ -94,7 +94,7 @@ padding-left:20px;
 padding-bottom:10px;
 }
 span.flash{
-transition:all 0.2s;
+transition:all 0.4s;
 }
 span.flash:hover{
 -webkit-transform:translateY(90px);
