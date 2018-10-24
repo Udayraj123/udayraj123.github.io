@@ -10,3 +10,13 @@
 <!-- Main -->
 <script src="{{assets}}/js/main.js"></script>
 
+
+{{#is basename "make_index" }}	
+<!-- Carousel (for Class schedule) -->
+<script src="{{assets}}/js/owl.carousel.min.js"></script>
+{{else}}
+{{#is basename "make_projects" }}	
+<!-- Span flash (for autochanging yellow label, from wesbos) -->
+<script src="{{assets}}/js/span-flash.js"></script>
+{{/is}}
+{{/is}}

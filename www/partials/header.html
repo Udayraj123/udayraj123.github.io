@@ -85,7 +85,8 @@
 	<!-- Modernizr JS (Reduces lag, Contains fade effect for everything) -->
 	<script src="assets/js/modernizr-2.6.2.min.js"></script>
 	
-	{{#is basename "make_index" }}	
+	<!-- #is basename "make_index" }}	 -->
+	{{#is basename "make_projects" }}	
 	<!-- Span flash (from wesbos) -->
 	<link rel="stylesheet" href="{{assets}}/css/span-flash.css">
 	{{/is}}
@@ -171,7 +172,7 @@
 				<div class="col-xs-2">
 					<div id="fh5co-logo"><a href="index.html">Udayraj<span>.</span></a></div>
 				</div>
-				<div class="col-xs-8 text-right menu-1">
+				<div class="col-xs-10 text-right menu-1">
 					<ul>
 						<!-- <li><a href="about.html">About</a></li> -->
 						<li {{#is basename "make_index" }}class="active"{{/is}}><a href="index.html">Home</a></li>
@@ -190,17 +191,6 @@
 						</li>
 					-->
 				</ul>
-			</div>
-			<div class="col-xs-2">
-				<a href="https://stackoverflow.com/users/6242649/udayraj-deshmukh">
-					<img src="https://stackoverflow.com/users/flair/6242649.png?theme=clean" width="208" height="58" alt="Udayraj on StackOverflow" title="Udayraj on StackOverflow">
-				</a>
-
-				<br>
-				<!-- Place this tag where you want the button to render. -->
-				<!-- <a class="github-button" href="https://github.com/udayraj123" data-show-count="true" aria-label="Follow udayraj123@GitHub">Follow @udayraj123</a> -->
-				<a class="github-button" href="https://github.com/udayraj123" data-show-count="true" aria-label="Follow udayraj123@GitHub"><i class="icon-github"></i> Follow</a>
-
 			</div>
 		</div>
 
