@@ -5,6 +5,9 @@
 ### Install
 	sudo -E npm install
 
+### Make changes
+Find "make_*" files inside `www/contents` folder. They correspond to each page on the site. Make changes and go to next step
+
 ### (Avengers) Assemble!
 	grunt assemble
 
