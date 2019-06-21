@@ -17,10 +17,12 @@
   },
   "homepage": "https://github.com/udayraj123/udayraj123.github.io#readme",
   "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-assemble": "^0.6.3"
   },
   "dependencies": {
     "grunt": "^1.0.2",
     "grunt-assemble": "^0.6.3",
     "grunt-contrib-connect": "^1.0.2"
-}
+  }
 }
