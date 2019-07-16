@@ -1180,9 +1180,10 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-blog {
   margin-bottom: 60px;
 }
+/* Projects page 
 .fh5co-blog a img {
   width: 100%;
-}
+}*/
 @media screen and (max-width: 768px) {
   .fh5co-blog {
     width: 100%;
