@@ -1,0 +1,26 @@
+{
+  "name": "udayraj123.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"No test required\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/udayraj123/udayraj123.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/udayraj123/udayraj123.github.io/issues"
+  },
+  "homepage": "https://github.com/udayraj123/udayraj123.github.io#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "braces": "^3.0.2",
+    "grunt": "^1.0.4",
+    "grunt-assemble": "^0.6.3",
+    "grunt-contrib-connect": "^1.0.2"
+  }
+}

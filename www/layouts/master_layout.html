@@ -1,0 +1,18 @@
+{{!-- COMMENTS: header contains <html><body> and the navbar,etc--}}
+	{{!-- body contains variable content --}}
+{{!-- footer contains </body></html> and the quicklinks footer --}}
+{{!-- Note that body.html doesn't exist. The sub-layouts provided in 'files' option will replace this 'body' --}}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	{{> header }}
+</head>
+<body>
+	{{> body }}
+
+	{{> footer_content }}
+
+	{{> footer_scripts }}
+</body>
+</html>

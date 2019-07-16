@@ -1,0 +1,101 @@
+.welcome{
+background:url(i/welcome-long.jpg);
+background-size:auto 450px;
+background-repeat:no-repeat;
+background-position:230px 90px;
+background-attachment:fixed;
+clear:both;
+}
+.welcome .welcomeText{
+padding:100px 0 50px 0;
+padding-bottom:130px;
+padding-left:400px;
+max-width:1000px;
+}
+.welcome h2{
+font-size:40px;
+background-image:-webkit-gradient(linear,0% 0%,85% 100%,from(#392c44),to(#b9a8c7));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+.welcome p{
+font-size:30px;
+font-family:'Raleway', serif;
+}
+.welcome p.subtext{
+font-size:20px;
+}
+span.flash{
+color: white;
+font-weight:bold;
+background:#ecd018;
+padding:1px 1px;
+display:inline-block;
+width:200px;
+text-align:center;
+position:relative;
+}
+span.flash i{
+visibility:hidden;
+}
+span.flash span{
+position:absolute;
+width:100%;
+left:0;
+top:0;
+background:#ecd018;
+transition:top 0.3s;
+-webkit-transform:translateZ(0);
+transform:translateZ(0);
+line-height:50px;
+}
+span.flash span:first-child{
+display:inline;
+z-index:1;
+}
+span.flash:hover,span.flash.open{
+background:none;
+}
+span.flash:hover span,span.flash.open span{
+transition:all 0.3s;
+top:auto;
+}
+span.flash:hover span.design,span.flash.open span.design{
+top:-96px;
+-webkit-transform:perspective(100px) rotateX(20deg);
+transform:perspective(100px) rotateX(20deg);
+}
+span.flash:hover span.develop,span.flash.open span.develop{
+top:-44px;
+-webkit-transform:perspective(100px) rotateX(-20deg);
+transform:perspective(100px) rotateX(-20deg);
+}
+span.flash:hover span.explore,span.flash.open span.explore{
+-webkit-transform:perspective(100px) rotateX(20deg);
+transform:perspective(100px) rotateX(20deg);
+top:0;
+}
+span.flash:hover span.contribute,span.flash.open span.contribute{
+top:52px;
+-webkit-transform:perspective(100px) rotateX(-20deg);
+transform:perspective(100px) rotateX(-20deg);
+}
+span.flash:hover span.create,span.flash.open span.create{
+-webkit-transform:perspective(200px) rotateX(40deg);
+transform:perspective(200px) rotateX(40deg);
+top:92px;
+}
+@media (max-width: 1100px){
+
+.welcome .welcomeText{
+background:rgba(255,255,255,0.48);
+margin-left:340px;
+padding-left:20px;
+padding-bottom:10px;
+}
+span.flash{
+transition:all 0.4s;
+}
+span.flash:hover{
+-webkit-transform:translateY(90px);
+}

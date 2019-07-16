@@ -1,0 +1,19 @@
+cool usages.txt
+Some in comments in Gruntfile.js also
+>> 
+{{#is basename "make_index" }}	
+<!-- Span flash (from wesbos) -->
+<link rel="stylesheet" href="{{assets}}/css/span-flash.css">
+{{/is}}
+{{#is basename "make_gallery" }}	
+<link href="{{assets}}/gridly/stylesheets/jquery.gridly.css" rel="stylesheet" type="text/css" />
+<link href="{{assets}}/lightgallery/css/lightgallery.css" rel="stylesheet" type="text/css" />	
+{{/is}}
+
+^^ depends on filename
+
+Enter: blocks!
+They are what laravel has. Your main usage may lie here..
+{{#> layouts/base title="Page Two" }}
+
+^^ Apparently needs gulp to work?!
