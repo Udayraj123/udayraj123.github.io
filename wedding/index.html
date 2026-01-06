@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manali & Udayraj Wedding</title>
+    <link rel="stylesheet" href="assets/main.css" />
+    <link rel="stylesheet" href="assets/offer.css" />
+    <link rel="stylesheet" href="assets/portfolio.css" />
+    <link rel="stylesheet" href="assets/contact.css" />
+    <link rel="stylesheet" href="assets/gift.css" />
+    <link rel="stylesheet" href="assets/venue.css" />
+    <link rel="stylesheet" href="assets/story.css" />
+    <link rel="stylesheet" href="assets/qa.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Sacramento"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Transparent Header -->
+    <header class="transparent-header">
+      <div class="header-container">
+        <!-- Logo / Wedding Text -->
+        <div class="header-logo">
+          <span class="wedding-text">Wedding</span>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="header-nav">
+          <a href="#" class="nav-link active">
+            <span class="link-text">Home</span>
+            <span class="link-underline"></span>
+          </a>
+          <a href="#" class="nav-link">
+            <span class="link-text">Memories</span>
+            <span class="link-underline"></span>
+          </a>
+          <a href="#" class="nav-link">
+            <span class="link-text">Get In Touch</span>
+            <span class="link-underline"></span>
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="video-banner-container">
+        <!-- Video Background -->
+        <div class="video-background">
+          <video autoplay muted loop playsinline class="background-video">
+            <source src="assets/videos/green.mp4" type="video/mp4" />
+            <!-- Fallback image if video doesn't load -->
+            <div
+              class="video-fallback"
+              style="background-image: url('assets/images/DSC_2395.JPG')"
+            ></div>
+          </video>
+        </div>
+
+        <!-- Audio -->
+        <audio id="backgroundAudio" loop muted>
+          <source src="assets/audio/02.mp3" type="audio/mpeg" />
+        </audio>
+
+        <!-- Audio Controls -->
+        <div class="audio-controls">
+          <button
+            class="audio-toggle muted"
+            id="audioToggle"
+            aria-label="Toggle music"
+          >
+            <i class="fas fa-volume-up"></i>
+            <i class="fas fa-volume-mute"></i>
+          </button>
+
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            class="volume-slider"
+            id="volumeSlider"
+          />
+        </div>
+
+        <!-- Banner Content -->
+        <div class="banner-content-video">
+          <!-- Wedding Text -->
+          <div class="wedding-text">
+            <div class="heart-wrapper">
+              <h1 class="couple-name">Manali & Udayraj</h1>
+            </div>
+
+            <div class="wedding-message">
+              <span class="message-text">We Are Getting Married</span>
+            </div>
+
+            <!-- Date and Place -->
+            <div class="date-place-info">
+              <div class="banner-info-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span class="banner-info-label">Date</span>
+                <span class="banner-info-value">February 10-11, 2026</span>
+              </div>
+              <div class="info-separator"></div>
+              <div class="banner-info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="banner-info-label">Place</span>
+                <span class="banner-info-value"
+                  >Dhole Patil Lawns, Sangamner</span
+                >
+              </div>
+            </div>
+
+            <!-- Circular Countdown -->
+            <div class="circular-countdown-video">
+              <div class="countdown-circle-video">
+                <div class="circle-progress-video" data-days>
+                  <svg class="progress-ring-video" width="90" height="90">
+                    <circle
+                      class="progress-ring-circle-video"
+                      stroke-width="4"
+                      fill="transparent"
+                      r="40"
+                      cx="45"
+                      cy="45"
+                    />
+                  </svg>
+                  <div class="circle-content-video">
+                    <span class="circle-number-video" id="video-days">00</span>
+                    <span class="circle-label-video">Days</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="countdown-circle-video">
+                <div class="circle-progress-video" data-hours>
+                  <svg class="progress-ring-video" width="90" height="90">
+                    <circle
+                      class="progress-ring-circle-video"
+                      stroke-width="4"
+                      fill="transparent"
+                      r="40"
+                      cx="45"
+                      cy="45"
+                    />
+                  </svg>
+                  <div class="circle-content-video">
+                    <span class="circle-number-video" id="video-hours">00</span>
+                    <span class="circle-label-video">Hours</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="countdown-circle-video">
+                <div class="circle-progress-video" data-minutes>
+                  <svg class="progress-ring-video" width="90" height="90">
+                    <circle
+                      class="progress-ring-circle-video"
+                      stroke-width="4"
+                      fill="transparent"
+                      r="40"
+                      cx="45"
+                      cy="45"
+                    />
+                  </svg>
+                  <div class="circle-content-video">
+                    <span class="circle-number-video" id="video-minutes"
+                      >00</span
+                    >
+                    <span class="circle-label-video">Minutes</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="countdown-circle-video">
+                <div class="circle-progress-video" data-seconds>
+                  <svg class="progress-ring-video" width="90" height="90">
+                    <circle
+                      class="progress-ring-circle-video"
+                      stroke-width="4"
+                      fill="transparent"
+                      r="40"
+                      cx="45"
+                      cy="45"
+                    />
+                  </svg>
+                  <div class="circle-content-video">
+                    <span class="circle-number-video" id="video-seconds"
+                      >00</span
+                    >
+                    <span class="circle-label-video">Seconds</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-decoration bottom"></div>
+          </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+          <div class="scroll-arrow">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wedding Venue Section -->
+      <section class="wedding-journey">
+        <div class="journey-header">
+          <h2>Our Wedding Celebration</h2>
+          <p>A two-day celebration we can't wait to share with you</p>
+        </div>
+
+        <div class="journey-line"></div>
+
+        <!-- Day 1: February 10, 2026 -->
+        <div class="journey-step">
+          <div
+            class="journey-image"
+            style="background-image: url('assets/images/church.jpg')"
+          ></div>
+
+          <div class="journey-content">
+            <span class="journey-time">
+              <i class="far fa-calendar"></i>
+              Day 1 - February 10, 2026
+            </span>
+            <h3>Hotel Check-in & Haldi Ceremony</h3>
+            <h4>Dhole Patil Lawns, Sangamner</h4>
+            <p>
+              Join us for the traditional Haldi ceremony followed by snacks,
+              dinner, games and performances. The evening concludes with Sangeet
+              celebrations.
+            </p>
+
+            <div class="journey-meta">
+              <span
+                ><i class="fas fa-clock"></i> 01:00 PM - Hotel Check-in</span
+              >
+              <span
+                ><i class="fas fa-clock"></i> 05:30 PM - Haldi & Snacks</span
+              >
+            </div>
+            <div class="journey-meta">
+              <span
+                ><i class="fas fa-utensils"></i> 08:30 PM - Dinner Starts</span
+              >
+              <span><i class="fas fa-music"></i> 10:30 PM - Sangeet Ends</span>
+            </div>
+
+            <a
+              class="journey-btn"
+              target="_blank"
+              href="https://maps.app.goo.gl/placeholder"
+            >
+              Get Directions
+            </a>
+          </div>
+        </div>
+
+        <!-- Day 2: February 11, 2026 -->
+        <div class="journey-step reverse">
+          <div
+            class="journey-image"
+            style="background-image: url('assets/images/valle.jpg')"
+          ></div>
+
+          <div class="journey-content">
+            <span class="journey-time">
+              <i class="far fa-calendar"></i>
+              Day 2 - February 11, 2026
+            </span>
+            <h3>Wedding Ceremony & Reception</h3>
+            <h4>Dhole Patil Lawns, Sangamner</h4>
+            <p>
+              The main wedding day begins with a photo session, followed by
+              traditional Vidhi ceremonies, breakfast, reception, lunch, and
+              concludes with Vidai & Gruhapravesh.
+            </p>
+
+            <div class="journey-meta">
+              <span
+                ><i class="fas fa-camera"></i> 06:30 AM - Photo Session</span
+              >
+              <span><i class="fas fa-om"></i> 07:00 AM - Vidhi Starts</span>
+            </div>
+            <div class="journey-meta">
+              <span><i class="fas fa-coffee"></i> 08:30 AM - Breakfast</span>
+              <span><i class="fas fa-ring"></i> 11:30 AM - Reception</span>
+            </div>
+            <div class="journey-meta">
+              <span><i class="fas fa-utensils"></i> 12:30 PM - Lunch</span>
+              <span
+                ><i class="fas fa-heart"></i> 04:00 PM - Vidai &
+                Gruhapravesh</span
+              >
+            </div>
+
+            <a
+              class="journey-btn"
+              target="_blank"
+              href="https://maps.app.goo.gl/placeholder"
+            >
+              Get Directions
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="wedding-qa">
+        <div class="qa-container">
+          <div class="qa-header">
+            <h2>Good to Know</h2>
+            <p>A few helpful details to make your day smooth and joyful</p>
+          </div>
+
+          <div class="qa-list">
+            <div class="qa-item">
+              <h3>
+                <i class="fas fa-user-tie"></i>
+                What should I wear?
+              </h3>
+              <p>
+                Traditional Indian wedding attire is encouraged. Ladies can wear
+                sarees, lehengas, or anarkalis. Gentlemen can wear kurta
+                pajamas, sherwanis, or suits. Please feel free to embrace
+                vibrant colors and celebrate with us!
+              </p>
+            </div>
+
+            <div class="qa-item">
+              <h3>
+                <i class="fas fa-clock"></i>
+                What time should I arrive?
+              </h3>
+              <p>
+                For Day 1 (February 10), please check into your hotel by
+                <strong>1:00 PM</strong> and arrive at the venue by
+                <strong>5:00 PM</strong> for the Haldi ceremony. For Day 2
+                (February 11), please be present by <strong>6:30 AM</strong> for
+                the morning ceremonies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="coimbra-guide-compact">
+        <!-- Background Image -->
+        <div class="coimbra-background">
+          <div class="background-overlay"></div>
+        </div>
+
+        <div class="guide-container">
+          <div class="guide-header">
+            <header class="coimbra-header">
+              <span class="coimbra-eyebrow">Wedding Travel Guide</span>
+              <h2>Travel to Sangamner</h2>
+              <p>
+                Essential travel information to help you reach the celebration
+                and explore the beautiful surroundings.
+              </p>
+            </header>
+            <div class="gold-divider"></div>
+          </div>
+
+          <div class="guide-content-side">
+            <!-- Left Side - Travel Tips -->
+            <div class="guide-column">
+              <div class="column-header">
+                <div class="column-icon">
+                  <i class="fas fa-plane-arrival"></i>
+                </div>
+                <h3>Getting There</h3>
+              </div>
+
+              <div class="compact-list">
+                <!-- Travel Option 1 -->
+                <div class="compact-item">
+                  <div
+                    class="item-image"
+                    style="
+                      background-image: url('assets/images/university.jpg');
+                    "
+                  ></div>
+                  <div class="item-content">
+                    <h4>Via Pune Airport</h4>
+                    <p class="item-description">
+                      Fly into Pune, then travel to Sangamner
+                    </p>
+                    <div class="item-meta">
+                      <span class="item-time"
+                        ><i class="fas fa-route"></i> 150 km</span
+                      >
+                      <span class="item-price"
+                        ><i class="fas fa-clock"></i> 4 hours</span
+                      >
+                    </div>
+                    <p
+                      style="font-size: 0.9em; margin-top: 0.5rem; color: #666"
+                    >
+                      Best option if landing before 9 AM on Feb 10. Share a
+                      rental car with friends for 2 days.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Travel Option 2 -->
+                <div class="compact-item">
+                  <div
+                    class="item-image"
+                    style="background-image: url('assets/images/joanina.jpg')"
+                  ></div>
+                  <div class="item-content">
+                    <h4>Via Shirdi Airport</h4>
+                    <p class="item-description">Closest airport to Sangamner</p>
+                    <div class="item-meta">
+                      <span class="item-time"
+                        ><i class="fas fa-route"></i> 50 km</span
+                      >
+                      <span class="item-price"
+                        ><i class="fas fa-clock"></i> 1.5 hours</span
+                      >
+                    </div>
+                    <p
+                      style="font-size: 0.9em; margin-top: 0.5rem; color: #666"
+                    >
+                      Convenient option with shorter travel time to the venue.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Travel Option 3 -->
+                <div class="compact-item">
+                  <div
+                    class="item-image"
+                    style="
+                      background-image: url('assets/images/pequenitos.jpg');
+                    "
+                  ></div>
+                  <div class="item-content">
+                    <h4>Rental Car Sharing</h4>
+                    <p class="item-description">
+                      Cost-effective travel solution
+                    </p>
+                    <div class="item-meta">
+                      <span class="item-time"
+                        ><i class="fas fa-users"></i> Share with friends</span
+                      >
+                      <span class="item-price"
+                        ><i class="fas fa-calendar"></i> 2 days</span
+                      >
+                    </div>
+                    <p
+                      style="font-size: 0.9em; margin-top: 0.5rem; color: #666"
+                    >
+                      Land in Pune before 9 AM on Feb 10, rent a car with
+                      friends, return via Pune on Feb 11 night.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Travel Option 4 -->
+                <div class="compact-item">
+                  <div
+                    class="item-image"
+                    style="
+                      background-image: url('assets/images/mosteiro-de-santa-clara.jpg');
+                    "
+                  ></div>
+                  <div class="item-content">
+                    <h4>Extended Stay</h4>
+                    <p class="item-description">Make it a longer celebration</p>
+                    <div class="item-meta">
+                      <span class="item-time"
+                        ><i class="fas fa-home"></i> Stay with family</span
+                      >
+                      <span class="item-price"
+                        ><i class="fas fa-map-marked-alt"></i> Explore
+                        nearby</span
+                      >
+                    </div>
+                    <p
+                      style="font-size: 0.9em; margin-top: 0.5rem; color: #666"
+                    >
+                      Enough space at relatives' homes for extended stays. Visit
+                      Shirdi and Trimbakeshwar.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side - Nearby Attractions -->
+            <div class="guide-column">
+              <div class="column-header">
+                <div class="column-icon">
+                  <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <h3>Nearby Attractions</h3>
+              </div>
+
+              <div class="compact-list">
+                <!-- Attraction 1 -->
+                <div class="compact-item hotel-item">
+                  <div class="item-badge luxury">Spiritual</div>
+                  <div
+                    class="item-image"
+                    style="background-image: url('assets/images/din.webp')"
+                  ></div>
+                  <div class="item-content">
+                    <h4>Shirdi Sai Baba Temple</h4>
+                    <p class="item-description">
+                      Famous pilgrimage site dedicated to Sai Baba
+                    </p>
+                    <div class="item-meta">
+                      <span class="item-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        4.8
+                      </span>
+                      <span class="item-price">50 km</span>
+                    </div>
+                    <div class="item-features">
+                      <span class="feature"><i class="fas fa-om"></i></span>
+                      <span class="feature"
+                        ><i class="fas fa-parking"></i
+                      ></span>
+                      <span class="feature"
+                        ><i class="fas fa-utensils"></i
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Attraction 2 -->
+                <div class="compact-item hotel-item">
+                  <div class="item-badge boutique">Temple</div>
+                  <div
+                    class="item-image"
+                    style="
+                      background-image: url('assets/images/sapientia.jpeg');
+                    "
+                  ></div>
+                  <div class="item-content">
+                    <h4>Trimbakeshwar Temple</h4>
+                    <p class="item-description">Ancient Jyotirlinga temple</p>
+                    <div class="item-meta">
+                      <span class="item-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.7
+                      </span>
+                      <span class="item-price">~100 km</span>
+                    </div>
+                    <div class="item-features">
+                      <span class="feature"><i class="fas fa-om"></i></span>
+                      <span class="feature"
+                        ><i class="fas fa-mountain"></i
+                      ></span>
+                      <span class="feature"><i class="fas fa-camera"></i></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Attraction 3 -->
+                <div class="compact-item hotel-item">
+                  <div class="item-badge comfort">Nature</div>
+                  <div
+                    class="item-image"
+                    style="background-image: url('assets/images/tivoli.jpg')"
+                  ></div>
+                  <div class="item-content">
+                    <h4>Local Sangamner</h4>
+                    <p class="item-description">
+                      Explore the town and surroundings
+                    </p>
+                    <div class="item-meta">
+                      <span class="item-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        4.0
+                      </span>
+                      <span class="item-price">Local</span>
+                    </div>
+                    <div class="item-features">
+                      <span class="feature"
+                        ><i class="fas fa-shopping-bag"></i
+                      ></span>
+                      <span class="feature"
+                        ><i class="fas fa-utensils"></i
+                      ></span>
+                      <span class="feature"
+                        ><i class="fas fa-walking"></i
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gift-card-section">
+        <div class="gift-card-wrapper">
+          <div class="gift-card-header">
+            <h2>Wedding Gift Registry</h2>
+            <p>
+              Your presence is the greatest gift of all. For those who wish to
+              honor us with a contribution, we have lovingly shared the details
+              below.
+            </p>
+          </div>
+
+          <div class="gift-row">
+            <!-- Amazon Wishlist Card -->
+            <div
+              class="wedding-gift-card"
+              style="width: 100%; max-width: 600px; margin: 0 auto"
+            >
+              <div class="card-top">
+                <span class="card-title">Amazon Wishlist</span>
+                <i class="fab fa-amazon"></i>
+              </div>
+
+              <div class="card-iban">
+                <span class="label">Our Wishlist</span>
+                <p style="margin-top: 1rem; font-size: 1rem; line-height: 1.6">
+                  We've curated a collection of items that would help us start
+                  our new journey together. Feel free to browse and choose
+                  something that resonates with you.
+                </p>
+              </div>
+
+              <div class="card-details">
+                <a
+                  href="https://www.amazon.in/hz/wishlist/ls/9L9KF252DUJP"
+                  target="_blank"
+                  class="paypal-btn"
+                  style="display: inline-block; margin-top: 1rem"
+                >
+                  <i class="fab fa-amazon"></i>
+                  View Our Amazon Wishlist
+                </a>
+              </div>
+
+              <div class="card-footer">
+                <span>Thank you for your generosity</span>
+                <span class="card-mark">♡ 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RSVP Section -->
+      <!-- 
+    <section class="rsvp-arch">
+        <div class="rsvp-arch-wrapper">
+      
+        </div>
+      </section> -->
+
+      <section class="contact-section">
+        <div class="contact-container">
+          <!-- Left Side: Contact Details -->
+          <div class="contact-details">
+            <h2>Get in Touch</h2>
+            <p>
+              We'd love to hear from you! Reach out to us for any inquiries.
+            </p>
+            <ul class="contact-info">
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a
+                  href="mailto:manoday717@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  manoday717@gmail.com
+                </a>
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+                <a
+                  href="tel:+918329544805"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  +91 8329544805
+                </a>
+              </li>
+            </ul>
+            <div class="social-links">
+              <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+
+          <!-- Right Side: Contact Form -->
+          <div class="contact-form-container">
+            <!-- Content Side -->
+            <div class="rsvp-arch-content" style="width: 100%; max-width: none">
+              <span class="rsvp-eyebrow">RSVP</span>
+              <h2>Join Us On Our Special Day</h2>
+
+              <p class="rsvp-text">
+                "Your presence is the greatest gift of all" We would be honored
+                to celebrate this beautiful moment with you. Kindly let us know
+                if you will be attending by filling out the form below.
+              </p>
+
+              <div style="width: 100%; margin-top: 2rem; overflow: hidden">
+                <iframe
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSdPOjQYq-KFmYvZKz-rcHuG8Racq-7lb4XxRdQ_kHgNGF8w1w/viewform?embedded=true"
+                  width="100%"
+                  height="1200"
+                  frameborder="0"
+                  marginheight="0"
+                  marginwidth="0"
+                >
+                  Loading…
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <!-- <script>
+        document.getElementById('joyfulAccept').addEventListener('click', function(e) {
+          // Prevent form submission if wrapped in a form
+          e.preventDefault();
+          
+          // Confetti explosion
+          confetti({
+            particleCount: 150,
+            spread: 70,
+            origin: { y: 0.6 },
+            colors: ['#d4af37', '#ffffff', '#ffd700']
+          });
+          
+          // Visual feedback
+          this.classList.add('clicked');
+          setTimeout(() => {
+            this.innerHTML = '<i class="fas fa-check"></i> Confirmed!';
+          }, 1000);
+          
+          // Here you would add your actual form submission code
+          console.log('RSVP recorded: Attending');
+        });
+      </script> -->
+  </body>
+</html>

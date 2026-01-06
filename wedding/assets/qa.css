@@ -1,0 +1,84 @@
+.wedding-qa {
+    padding: 60px 10px;
+    background: linear-gradient(
+      to bottom,
+      rgba(214, 201, 137, 0.08),
+      rgba(255,255,255,0)
+    );
+  }
+  
+  .qa-container {
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .qa-header {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  
+  .qa-header h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: var(--primary);
+  }
+  
+  .qa-header p {
+    color: var(--primary-light);
+    font-style: italic;
+  }
+  
+  .qa-list {
+    display: grid;
+    gap: 40px;
+  }
+  
+  .qa-item {
+    background: white;
+    padding: 40px 45px;
+    border-radius: 28px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    border: 1px solid rgba(214,201,137,0.25);
+  }
+  
+  .qa-item h3 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--primary);
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+  }
+  
+  .qa-item h3 i {
+    color: var(--icon);
+    font-size: 1.2rem;
+  }
+  
+  .qa-item p {
+    color: #555;
+    line-height: 1.7;
+    font-size: 1rem;
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .wedding-qa {
+      padding: 90px 20px;
+    }
+  
+    .qa-header h2 {
+      font-size: 2.4rem;
+    }
+  
+    .qa-item {
+      padding: 30px;
+    }
+  
+    .qa-item h3 {
+      font-size: 1.2rem;
+    }
+  }
+  

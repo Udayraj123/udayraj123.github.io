@@ -1,0 +1,507 @@
+
+/* Our Offer Section */
+.place-to-stay {
+    background: url('images/coimbra2.jpg') no-repeat center center/cover;
+    padding: 100px 0px;
+}
+
+/* About Us Card */
+.about-card {
+    background: white;
+    padding: 70px;
+    padding-top: -10px;
+    border-bottom-left-radius: 210px;
+    max-width: 780px;
+    margin-left: auto;
+    margin-top: -10px;
+}
+
+.about-card h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.about-card p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.read-more-btn {
+    padding: 12px 30px;
+    float: right;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #8e44ad, var(--gold));
+    border-radius: 34px 10px 34px 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(142, 68, 173, 0.4);
+}
+
+.read-more-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(142, 68, 173, 0.6);
+}
+
+/* Offer Cards */
+
+/* Offer List */
+.offer-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 40px;
+    padding-top: 80px;
+}
+
+.offer-card {
+    flex: 1;
+    padding: 50px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+.offer-card h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--gold);
+}
+
+/* Additional Details */
+.places-section,
+.stay-section {
+    flex: 1 1;
+    padding: 10px;
+}
+
+.places-section h3,
+.stay-section h3 {
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.offer-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.offer-info li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.offer-info li i {
+    margin-right: 10px;
+    color: var(--gold);
+    font-size: 1.2rem;
+}
+
+.offer-info a {
+    color: var(--dark); 
+    text-decoration: none; 
+    font-weight: 500; 
+    transition: color 0.3s ease; 
+}
+
+.offer-info a:hover {
+    color: var(--gold-dark);
+    text-decoration: underline; 
+}
+
+
+
+
+
+
+.coimbra-guide-compact {
+  position: relative;
+  padding: 160px 20px;
+  color: #333;
+  overflow: hidden;
+  background-image: url('assets/images/coimbra/coimbra-city.jpg');
+  background-size: cover;
+  background-position: center;
+  clip-path: ellipse(100% 100% at 50% 100%);
+  border-radius: 50% 50% 0 0 / 20% 20% 0 0;
+}
+
+/* Softer romantic overlay */
+.coimbra-guide-compact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(42, 91, 30, 0.55),
+      rgba(42, 91, 30, 0.85)
+    );
+  z-index: 0;
+}
+
+
+@media (max-width: 768px) {
+    .coimbra-guide-compact {
+      padding: 100px 20px 80px;
+      clip-path: none;
+      border-radius: 0;
+    }
+  }
+  @media (max-width: 480px) {
+    .coimbra-guide-compact {
+      padding: 90px 16px 70px;
+    }
+  }
+    
+
+
+.coimbra-eyebrow {
+    letter-spacing: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--icon);
+  }
+  
+
+.coimbra-header h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.8rem;
+    margin: 15px 0;
+    color: white;
+  }
+  
+  .coimbra-header p {
+    max-width: 560px;
+    margin: auto;
+    font-style: italic;
+    opacity: 0.9;
+    color: whitesmoke;
+  }
+  
+
+
+
+
+.guide-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.guide-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.guide-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.2rem;
+    color: white;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.guide-subtitle {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.gold-divider {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, #d6c989cc, #f4e6c3, #d6c989cc);
+    margin: 0 auto;
+}
+
+/* Side by Side Layout */
+.guide-content-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.guide-column {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.column-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--icon);
+}
+
+.column-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #2a5b1e, #4b7749);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column-icon i {
+    font-size: 1.3rem;
+    color: white;
+}
+
+.column-header h3 {
+    font-size: 1.5rem;
+    color: var(--primary-light);
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Compact List Items */
+.compact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.compact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    border: 1px solid transparent;
+}
+
+.compact-item:hover {
+    background: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-color: rgba(212, 175, 55, 0.2);
+}
+
+.item-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.item-badge {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: white;
+    z-index: 2;
+}
+
+.item-badge.luxury { background: #2a5b1e; }
+.item-badge.boutique { background: #d4af37; }
+.item-badge.comfort { background: #e91e63; }
+.item-badge.budget { background: #4b7749; }
+
+.item-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.item-content h4 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.item-description {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.item-meta {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.item-time,
+.item-price,
+.item-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.8rem;
+    color: #888;
+    font-weight: 500;
+}
+
+.item-rating i,
+.item-time i,
+.item-price i {
+    color: var(--primary-light);
+    font-size: 0.7rem;
+}
+
+.item-features {
+    display: flex;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.feature {
+    color: var(--primary-light);
+    font-size: 0.8rem;
+}
+
+.item-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 10px;
+}
+
+.item-link:hover {
+    background: var(--primary-light);
+    transform: scale(1.1);
+    color: white;
+}
+
+/* Compact Transport */
+.compact-transport {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.transport-tip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    font-weight: 500;
+}
+
+.transport-tip i {
+    color: #d4af37;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .guide-content-side {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .guide-column {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .coimbra-guide-compact {
+        padding: 60px 20px;
+    }
+    
+    .guide-title {
+        font-size: 2.5rem;
+    }
+    
+    .compact-item {
+        padding: 15px;
+    }
+    
+    .item-image {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .item-content h4 {
+        font-size: 1rem;
+    }
+    
+    .item-description {
+        font-size: 0.85rem;
+    }
+    
+    .compact-transport {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .guide-title {
+        font-size: 2rem;
+    }
+    
+    .column-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .compact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    
+    .item-meta {
+        justify-content: center;
+    }
+    
+    .item-link {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+    
+    .item-image {
+        width: 100%;
+        height: 120px;
+    }
+}

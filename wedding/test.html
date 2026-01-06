@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebration Event</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .intro-text {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+        
+        .challenges-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .challenge-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 25px;
+            width: 300px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        
+        .challenge-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            text-align: center;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 10px;
+        }
+        
+        .challenge-list {
+            list-style-type: none;
+        }
+        
+        .challenge-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .countdown-section {
+            text-align: center;
+            margin: 50px 0;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+        }
+        
+        .countdown-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+        
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            padding: 20px;
+            min-width: 120px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .countdown-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .countdown-label {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin: 40px 0 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .program-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .program-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .program-description {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .team-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .team-member {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+        
+        .contact-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-text {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .contact-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .contact-button:hover {
+            background: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .countdown-item {
+                min-width: 100px;
+            }
+            
+            .countdown-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>The celebration event will be held on</h1>
+            <p class="intro-text">There are many dedicated challenges of future health, which are important to the future and make new directions for opportunities.</p>
+        </header>
+        
+        <section class="challenges-section">
+            <div class="challenge-card">
+                <h3 class="challenge-title">SALICATED WITH</h3>
+                <ul class="challenge-list">
+                    <li>Increase in value achieved / strategies</li>
+                    <li>Of our strengths available</li>
+                </ul>
+            </div>
+            
+            <div class="challenge-card">
+                <h3 class="challenge-title">HEALTHY, HEALTHY</h3>
+                <ul class="challenge-list">
+                    <li>Increase in value achieved / strategies</li>
+                    <li>Of our strengths available</li>
+                </ul>
+            </div>
+            
+            <div class="challenge-card">
+                <h3 class="challenge-title">ISLE BACKEN AND SALICATIONS FROM ACTIONE</h3>
+                <ul class="challenge-list">
+                    <li>Increase in value achieved / strategies</li>
+                    <li>Of our strengths available</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="countdown-section">
+            <h2 class="countdown-title">Countdown to Event</h2>
+            <div class="countdown-container">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">637</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">09</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">42</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">20</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+        </section>
+        
+        <h2 class="section-title">Beautiful moments on happy days</h2>
+        
+        <section class="program-section">
+            <h3 class="program-title">MAINTAINS PROGRAM MOVERS</h3>
+            <h3 class="program-title">HAPPY DAYS AND ALL FATHERS</h3>
+            <p class="program-description">Introducing a new opportunity to deliver up</p>
+        </section>
+        
+        <section class="team-section">
+            <h3 class="program-title">IN ESSENTIAL</h3>
+            <h3 class="program-title">HAPPY DAYS AND ALL FATHERS</h3>
+            <p class="program-description">Improve the strength of employees / team members. Build new ways to help them achieve their goals.</p>
+            <p class="program-description">Provide information from people by coordinating or monitoring with each other and helping them achieve their goals.</p>
+            
+            <div class="team-grid">
+                <div class="team-member">CHURCH JEWELRY</div>
+                <div class="team-member">MARVEL JUNK PERSON</div>
+                <div class="team-member">ANNUAL BANKSHIP</div>
+                <div class="team-member">JUNK SMITH COMMAND</div>
+            </div>
+        </section>
+        
+        <section class="contact-section">
+            <h3 class="contact-title">Contact us immediately if you need help</h3>
+            <p class="contact-text">There are many initiatives of grassroots culture to join a nation. Just the amazing lives in America.</p>
+            <a href="#" class="contact-button">CONTACT US</a>
+        </section>
+    </div>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            // Set your target date here (year, month (0-11), day, hour, minute, second)
+            const targetDate = new Date(2025, 8, 4, 19, 28, 16); // September 4, 2025, 19:28:16
+            
+            const now = new Date();
+            const difference = targetDate - now;
+            
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+                
+                document.getElementById('days').textContent = days.toString().padStart(3, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            } else {
+                document.getElementById('days').textContent = '000';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+            }
+        }
+        
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+    </script>
+</body>
+</html>

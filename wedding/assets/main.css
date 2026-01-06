@@ -1,0 +1,754 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@font-face {
+    font-family: 'Amsterdam 2';
+    src: url('fonts/amsterdam2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary: #2a5b1e;    
+    --primary-light: #4b7749; 
+    --primary-dark: #276749;  
+    --accent: #38A169;        
+    --dark: #2A2A2A;
+    --light: hwb(50 91% 7% / 0.881);
+    --icon: #b49b20;
+    --green-g: #237A57;
+}
+
+body {
+    background-color: var(--light);
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif; 
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Great Vibes', cursive; 
+    color: var(--gold);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+/* Other Text Styling */
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+a {
+    color: inherit; 
+    text-decoration: none; 
+}
+
+a:hover {
+    text-decoration: underline; 
+    color: var(--gold); 
+}
+
+
+
+
+
+.transparent-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    backdrop-filter: none;
+    box-shadow: none;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+/* Wedding Text Logo */
+.header-logo {
+    flex-shrink: 0;
+}
+
+.wedding-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.2rem;
+    color: white;
+    font-weight: normal;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+.transparent-header .wedding-text {
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation */
+.header-nav {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.transparent-header .nav-link {
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.link-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ffffff, rgba(255, 255, 255, 0.8));
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.transparent-header .link-underline {
+    background: linear-gradient(90deg, #ffffff, rgba(255, 255, 255, 0.8));
+}
+
+.nav-link.active .link-underline,
+.nav-link:hover .link-underline {
+    width: 100%;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.menu-bar {
+    width: 20px;
+    height: 2px;
+    background: white;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+/* Keep menu bars white always */
+.transparent-header .menu-bar {
+    background: white;
+}
+
+.mobile-menu-btn:hover .menu-bar {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Mobile Menu */
+.mobile-nav {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-nav.active {
+    display: flex;
+}
+
+.mobile-nav-link {
+    padding: 15px 0;
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-nav-link:last-child {
+    border-bottom: none;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+    color: rgba(255, 255, 255, 0.8);
+    padding-left: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-nav {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .wedding-text {
+        font-size: 1.8rem;
+    }
+    
+    .header-container {
+        height: 70px;
+        padding: 0 15px;
+    }
+    
+    .mobile-nav {
+        top: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wedding-text {
+        font-size: 1.6rem;
+    }
+    
+    .header-container {
+        height: 60px;
+        padding: 0 15px;
+    }
+    
+    .mobile-nav {
+        top: 60px;
+    }
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure content starts below fixed header */
+main {
+    margin-top: 0px !important;
+}
+
+@media (max-width: 768px) {
+    main {
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        margin-top: 60px;
+    }
+}
+
+
+
+
+
+
+
+
+/* Video Banner Container */
+.video-banner-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -80px;
+    padding-top: 80px;
+}
+
+/* Video Background */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-fallback {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(
+        135deg,
+        rgba(249, 243, 239, 0.4) 0%,
+        rgba(122, 157, 126, 0.3) 50%,
+        rgba(90, 124, 93, 0.5) 100%
+    ); */
+    z-index: 2;
+}
+
+/* Banner Content */
+.banner-content-video {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: white;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin-top: 80px;
+}
+
+.wedding-text {
+    position: relative;
+}
+
+.text-decoration {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.8), transparent);
+}
+
+.text-decoration.top {
+    top: -80px;
+    height: 60px;
+}
+
+.text-decoration.bottom {
+    bottom: -80px;
+    height: 60px;
+}
+
+
+/* .couple-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background: rgba(255, 255, 255, ); 
+    backdrop-filter: blur(5px); 
+}  */
+
+.heart-wrapper {
+    display: inline-block;
+    /* padding: 100px 40px; */
+    /* background: rgba(255, 255, 255, ); */
+    margin-top: 20px;
+    /* backdrop-filter: blur(5px); */
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
+    border: none;
+    /* clip-path: path('M250,125 C125,62.5 0,125 0,250 C0,375 125,437.5 250,500 C375,437.5 500,375 500,250 C500,125 375,62.5 250,125 Z'); */
+}
+
+.couple-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 6rem;
+    font-weight: bold;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+}
+
+/* Wedding Message */
+.wedding-message {
+    margin-bottom: 30px;
+}
+
+.message-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    opacity: 0.9;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    padding: 0 20px;
+}
+
+.message-text::before,
+.message-text::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.message-text::before {
+    left: -60px;
+}
+
+.message-text::after {
+    right: -60px;
+}
+
+/* Date and Place Info */
+.date-place-info {
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+    background: rgba(255, 255, 255, ); 
+    backdrop-filter: blur(5px); 
+    padding: 20px 40px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 50px;
+}
+
+.banner-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.banner-info-item i {
+    font-size: 1.2rem;
+    color: rgba(214, 201, 137, 0.8);
+    margin-bottom: 5px;
+    
+}
+
+.banner-info-label {
+    font-size: 1rem !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    color: white !important;
+}
+
+.banner-info-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    /* text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); */
+}
+
+.info-separator {
+    width: 1px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Circular Countdown */
+.circular-countdown-video {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 35px;
+    margin-bottom: 100px;
+}
+
+.countdown-circle-video {
+    position: relative;
+    width: 90px;
+    height: 90px;
+}
+
+.circle-progress-video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.progress-ring-video {
+    transform: rotate(-90deg);
+}
+
+.progress-ring-circle-video {
+    /* stroke: rgba(255, 255, 255, 0.8); */
+    stroke: rgba(214, 201, 137, 0.8);
+    stroke-dasharray: 251.2; /* 2 * π * r (2 * 3.14159 * 40) */
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.5s ease;
+    stroke-linecap: round;
+}
+
+.circle-content-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.circle-number-video {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 2px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);   
+}
+
+.circle-label-video {
+    display: block;
+    font-size: 0.7rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.scroll-arrow {
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+.scroll-arrow i {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Hover Effects */
+.countdown-circle-video:hover .progress-ring-circle-video {
+    stroke: white;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+.countdown-circle-video:hover .circle-number-video {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .couple-name {
+        font-size: 3.5rem;
+    }
+    
+    .message-text {
+        font-size: 1.2rem;
+        letter-spacing: 4px;
+    }
+    
+    .date-place-info {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 30px;
+        border-radius: 25px;
+    }
+    
+    .info-separator {
+        width: 60px;
+        height: 1px;
+    }
+    
+    .circular-countdown-video {
+        gap: 15px;
+    }
+    
+    .countdown-circle-video {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .circle-number-video {
+        font-size: 1.2rem;
+    }
+    
+    .progress-ring-video {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .progress-ring-circle-video {
+        r: 32;
+        cx: 35;
+        cy: 35;
+        stroke-dasharray: 201; /* Updated for smaller radius */
+    }
+}
+
+@media (max-width: 480px) {
+    .couple-name {
+        font-size: 2.8rem;
+    }
+    
+    .message-text {
+        font-size: 1rem;
+        letter-spacing: 3px;
+    }
+    
+    .date-place-info {
+        padding: 15px 25px;
+    }
+    
+    .circular-countdown-video {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .countdown-circle-video {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .circle-number-video {
+        font-size: 1rem;
+    }
+    
+    .progress-ring-video {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .progress-ring-circle-video {
+        r: 26;
+        cx: 30;
+        cy: 30;
+        stroke-dasharray: 163.4; /* Updated for smaller radius */
+    }
+}
+
+
+
+
+
+.audio-controls {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(10px);
+    padding: 10px 14px;
+    border-radius: 30px;
+  }
+  
+  .audio-toggle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.4);
+    color: white;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .audio-toggle i {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    transition: opacity 0.3s ease;
+  }
+  
+  .audio-toggle .fa-volume-up { opacity: 1; }
+  .audio-toggle .fa-volume-mute { opacity: 0; }
+  
+  .audio-toggle.muted .fa-volume-up { opacity: 0; }
+  .audio-toggle.muted .fa-volume-mute { opacity: 1; }
+  
+  .volume-slider {
+    width: 90px;
+  }
+  
