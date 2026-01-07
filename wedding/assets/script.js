@@ -90,10 +90,10 @@ const countdown = setInterval(function() {
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
   
-  document.getElementById("days").innerHTML = days.toString().padStart(2, "0");
-  document.getElementById("hours").innerHTML = hours.toString().padStart(2, "0");
-  document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, "0");
-  document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, "0");
+  document.getElementById("video-days").innerHTML = days.toString().padStart(2, "0");
+  document.getElementById("video-hours").innerHTML = hours.toString().padStart(2, "0");
+  document.getElementById("video-minutes").innerHTML = minutes.toString().padStart(2, "0");
+  document.getElementById("video-seconds").innerHTML = seconds.toString().padStart(2, "0");
   
   if (distance < 0) {
     clearInterval(countdown);
@@ -432,8 +432,8 @@ document.addEventListener('DOMContentLoaded', () => {
       window.addEventListener(evt, startAudio, { once: true, passive: true });
     });
   
-    // ⏱️ Try after 30 seconds
-    setTimeout(startAudio, 30000);
+    // ⏱️ Try after 10 seconds
+    setTimeout(startAudio, 10000);
   
     // 🎚️ Toggle button
     toggle.addEventListener('click', () => {
