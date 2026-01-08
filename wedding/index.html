@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manali & Udayraj Wedding</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/images/favicon.png" />
+    <link rel="apple-touch-icon" href="./assets/images/favicon.png" />
+    
     <link rel="stylesheet" href="assets/main.css" />
-    <link rel="stylesheet" href="assets/responsive-fix.css" />
     <link rel="stylesheet" href="assets/offer.css" />
     <link rel="stylesheet" href="assets/portfolio.css" />
     <link rel="stylesheet" href="assets/contact.css" />
@@ -48,7 +53,7 @@
         </div>
 
         <!-- Navigation -->
-        <nav class="header-nav">
+        <!-- <nav class="header-nav">
           <a href="#" class="nav-link active">
             <span class="link-text">Home</span>
             <span class="link-underline"></span>
@@ -61,7 +66,7 @@
             <span class="link-text">Get In Touch</span>
             <span class="link-underline"></span>
           </a>
-        </nav>
+        </nav> -->
 
         <!-- Mobile Menu Button -->
         <button class="mobile-menu-btn">
@@ -90,7 +95,10 @@
 
         <!-- Audio -->
         <audio id="backgroundAudio" loop muted>
-          <source src="assets/audio/emily-watts-la-vie-en-rose.mp3" type="audio/mpeg" />
+          <source
+            src="assets/audio/emily-watts-la-vie-en-rose.mp3"
+            type="audio/mpeg"
+          />
         </audio>
 
         <!-- Audio Controls -->
@@ -259,7 +267,7 @@
               <i class="far fa-calendar"></i>
               Day 1 - February 10, 2026
             </span>
-            <h3>Hotel Check-in & Haldi Ceremony</h3>
+            <h3>Haldi Ceremony</h3>
             <h4>Dhole Patil Lawns, Sangamner</h4>
             <p>
               Join us for the traditional Haldi ceremony followed by snacks,
@@ -277,9 +285,12 @@
             </div>
             <div class="journey-meta">
               <span
-                ><i class="fas fa-utensils"></i> 08:30 PM - Sangeet & Dinner </span
+                ><i class="fas fa-utensils"></i> 08:30 PM - Sangeet & Dinner
+              </span>
+              <span
+                ><i class="fas fa-bed"></i> 10:30 PM - Early Rest for
+                Vidhi</span
               >
-              <span><i class="fas fa-bed"></i> 10:30 PM - Early Rest for Vidhi</span>
             </div>
 
             <a
@@ -307,17 +318,22 @@
             <h3>Wedding Ceremony & Reception</h3>
             <h4>Dhole Patil Lawns, Sangamner</h4>
             <p>
-              The main wedding day begins with Vidhi, followed by breakfast, reception, lunch, and
-              concludes with Vidai.
+              The main wedding day begins with Vidhi, followed by breakfast,
+              reception, lunch, and concludes with Vidai.
             </p>
 
             <div class="journey-meta">
               <span><i class="fas fa-om"></i> 07:00 AM - Vidhi Starts</span>
               <span><i class="fas fa-coffee"></i> 08:30 AM - Breakfast</span>
-              <span><i class="fas fa-hotel"></i> 10:30 AM - Rest/Luggage Packing</span>
-              <span><i class="fas fa-ring"></i> 12:00 PM - Reception</span>
             </div>
             <div class="journey-meta">
+              <span
+                ><i class="fas fa-hotel"></i> 10:30 AM - Rest/Luggage
+                Packing</span
+              >
+            </div>
+            <div class="journey-meta">
+              <span><i class="fas fa-ring"></i> 12:00 PM - Reception</span>
               <span><i class="fas fa-utensils"></i> 12:30 PM - Lunch</span>
               <span
                 ><i class="fas fa-home"></i> 04:00 PM - Vidai &
@@ -643,49 +659,16 @@
         <div class="gift-card-wrapper">
           <div class="gift-card-header">
             <h2>Wedding Gift Registry</h2>
-            <p>
-              Your presence is the greatest gift of all. For those who wish to
-              honor us with a contribution, we have lovingly shared the details
-              below.
-            </p>
-          </div>
-
-          <div class="gift-row">
-            <!-- Amazon Wishlist Card -->
-            <div
-              class="wedding-gift-card"
-              style="width: 100%; max-width: 600px; margin: 0 auto"
-            >
-              <div class="card-top">
-                <span class="card-title">Amazon Wishlist</span>
-                <i class="fab fa-amazon"></i>
-              </div>
-
-              <div class="card-iban">
-                <span class="label">Our Wishlist</span>
-                <p style="margin-top: 1rem; font-size: 1rem; line-height: 1.6">
-                  We've curated a collection of items that would help us start
-                  our new journey together. Feel free to browse and choose
-                  something that resonates with you.
-                </p>
-              </div>
-
-              <div class="card-details">
-                <a
-                  href="https://www.amazon.in/hz/wishlist/ls/9L9KF252DUJP"
-                  target="_blank"
-                  class="paypal-btn"
-                  style="display: inline-block; margin-top: 1rem"
-                >
-                  <i class="fab fa-amazon"></i>
-                  View Our Amazon Wishlist
-                </a>
-              </div>
-
-              <div class="card-footer">
-                <span>Thank you for your generosity</span>
-                <span class="card-mark">♡ 2026</span>
-              </div>
+            <div class="gift-card-content">
+              Your presence is the greatest gift of all. <br/> For those who wish to
+              honor us with a contribution, we've curated a collection of items
+              that would help us start our new journey together. Feel free to browse <a
+              href="https://www.amazon.in/hz/wishlist/ls/9L9KF252DUJP"
+              target="_blank"
+              style="display: inline-block; margin-top: 1rem; color: var(--gold); text-decoration: underline;"
+              >here</a
+            > and choose something that resonates with
+              you.
             </div>
           </div>
         </div>
@@ -729,9 +712,9 @@
                 </a>
               </li>
             </ul>
-            <div class="social-links">
+            <!-- <div class="social-links">
               <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
+            </div> -->
           </div>
 
           <!-- Right Side: Contact Form -->

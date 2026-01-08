@@ -6,6 +6,19 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Declare variables */
+:root {
+    --primary: #2a5b1e;    
+    --primary-light: #4b7749; 
+    --primary-dark: #276749;  
+    --accent: #38A169;        
+    --dark: #2A2A2A;
+    --light: hwb(50 91% 7% / 0.881);
+    --icon: #b49b20;
+    --gold: #D4AF37;
+    --gold-dark: #B49B20;
+}
+
 html {
     overflow-x: hidden;
     width: 100%;
@@ -25,16 +38,6 @@ body {
     font-style: normal;
 }
 
-:root {
-    --primary: #2a5b1e;    
-    --primary-light: #4b7749; 
-    --primary-dark: #276749;  
-    --accent: #38A169;        
-    --dark: #2A2A2A;
-    --light: hwb(50 91% 7% / 0.881);
-    --icon: #b49b20;
-    --green-g: #237A57;
-}
 
 body {
     background-color: var(--light);
@@ -76,9 +79,6 @@ a:hover {
     text-decoration: underline; 
     color: var(--gold); 
 }
-
-
-
 
 
 .transparent-header {

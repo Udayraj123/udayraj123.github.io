@@ -2,6 +2,7 @@
   padding: 100px 20px;
   max-width: 1200px;
   margin: auto;
+  position: relative;
 }
 
 .journey-header {
@@ -24,7 +25,6 @@
 .journey-line {
   position: absolute;
   left: 50%;
-  top: 250px;
   width: 2px;
   height: calc(100% - 300px);
   background: linear-gradient(to bottom, transparent, var(--icon), transparent);

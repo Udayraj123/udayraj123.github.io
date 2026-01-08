@@ -18,11 +18,13 @@
   color: var(--primary);
 }
 
-.gift-card-header p {
+.gift-card-header .gift-card-content {
   max-width: 560px;
   margin: 20px auto 70px;
   font-style: italic;
   color: var(--primary-light);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
 }
 
 /* Row */
