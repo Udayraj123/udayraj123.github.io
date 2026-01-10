@@ -1,133 +1,10 @@
 
-/* Our Offer Section */
-.place-to-stay {
-    /* background: url('images/coimbra2.jpg') no-repeat center center/cover; */
-    padding: 100px 0px;
-}
-
-/* About Us Card */
-.about-card {
-    background: white;
-    padding: 70px;
-    padding-top: -10px;
-    border-bottom-left-radius: 210px;
-    max-width: 780px;
-    margin-left: auto;
-    margin-top: -10px;
-}
-
-.about-card h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: var(--dark);
-}
-
-.about-card p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.read-more-btn {
-    padding: 12px 30px;
-    float: right;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    color: white;
-    background: linear-gradient(135deg, #8e44ad, var(--gold));
-    border-radius: 34px 10px 34px 10px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(142, 68, 173, 0.4);
-}
-
-.read-more-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(142, 68, 173, 0.6);
-}
-
-/* Offer Cards */
-
-/* Offer List */
-.offer-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    margin-bottom: 40px;
-    padding-top: 80px;
-}
-
-.offer-card {
-    flex: 1;
-    padding: 50px;
-    background: white;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-}
-
-.offer-card h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: var(--gold);
-}
-
-/* Additional Details */
-.places-section,
-.stay-section {
-    flex: 1 1;
-    padding: 10px;
-}
-
-.places-section h3,
-.stay-section h3 {
-    color: var(--gold);
-    margin-bottom: 15px;
-}
-
-.offer-info {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.offer-info li {
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.offer-info li i {
-    margin-right: 10px;
-    color: var(--gold);
-    font-size: 1.2rem;
-}
-
-.offer-info a {
-    color: var(--dark); 
-    text-decoration: none; 
-    font-weight: 500; 
-    transition: color 0.3s ease; 
-}
-
-.offer-info a:hover {
-    color: var(--gold-dark);
-    text-decoration: underline; 
-}
-
-
-
+/* Coimbra Guide Compact Section */
 .coimbra-guide-compact {
   position: relative;
   padding: 160px 20px;
   color: #333;
   overflow: hidden;
-  background-image: url('assets/images/coimbra/coimbra-city.jpg');
   background-size: cover;
   background-position: center;
   clip-path: ellipse(100% 100% at 50% 100%);
@@ -162,7 +39,6 @@
     }
   }
     
-
 
 .coimbra-eyebrow {
     letter-spacing: 4px;
@@ -443,18 +319,6 @@
         padding: 60px 20px;
     }
     
-    .about-card {
-        padding: 40px 30px;
-        border-bottom-left-radius: 100px;
-        max-width: 100%;
-        margin: 0 20px;
-    }
-    
-    .offer-card {
-        padding: 30px 25px;
-        max-width: 100%;
-    }
-    
     .guide-title {
         font-size: 2.5rem;
     }
@@ -484,24 +348,6 @@
 }
 
 @media (max-width: 480px) {
-    .about-card {
-        padding: 30px 20px;
-        border-bottom-left-radius: 60px;
-        margin: 0 10px;
-    }
-    
-    .about-card h2 {
-        font-size: 1.5rem;
-    }
-    
-    .about-card p {
-        font-size: 1rem;
-    }
-    
-    .offer-card {
-        padding: 25px 20px;
-    }
-    
     .guide-title {
         font-size: 2rem;
     }

@@ -107,6 +107,7 @@
     nekoEl.style.left = `${nekoPosX - 16}px`;
     nekoEl.style.top = `${nekoPosY - 16}px`;
     nekoEl.style.zIndex = Number.MAX_VALUE;
+    nekoEl.style.cursor = "pointer";
 
     let nekoFile = "./assets/oneko.gif"
     let nekoFile2 = "./assets/oneko-black.gif";
@@ -118,6 +119,7 @@
     nekoEl.style.transform = `scale(1.6)`;
     nekoEl2 = nekoEl.cloneNode(true);
     nekoEl2.id = "neko2";
+    nekoEl2.style.zIndex = nekoEl.style.zIndex -1;
     // Use the inverted black sprite for nekoEl2
     nekoEl2.style.backgroundImage = `url(${nekoFile2})`;
 
@@ -221,7 +223,7 @@
     const rect = nekoEl.getBoundingClientRect();
     const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const centerX = rect.left + rect.width / 2 + scrollLeft;
+    const centerX = rect.left + rect.width + scrollLeft;
     const centerY = rect.top + rect.height / 2 + scrollTop;
 
     for (let i = 0; i < 10; i++) {
@@ -257,7 +259,28 @@
 	  `;
 
   document.head.appendChild(style);
-  nekoEl.addEventListener('click', explodeHearts);
+  
+  // When neko is clicked, explode hearts AND play Romeo's meow!
+  nekoEl.addEventListener('click', function() {
+    explodeHearts();
+    // Trigger Romeo's meow if the function is available
+    if (typeof window.playRomeoMeow === 'function') {
+      window.playRomeoMeow();
+    } else {
+      console.log('playRomeoMeow not available yet');
+    }
+  });
+  
+  // Also make the second cat clickable
+  nekoEl2.addEventListener('click', function() {
+    explodeHearts();
+    // Trigger Romeo's meow if the function is available
+    if (typeof window.playRomeoMeow === 'function') {
+      window.playRomeoMeow();
+    } else {
+      console.log('playRomeoMeow not available yet');
+    }
+  });
 
   function frame() {
     frameCount += 1;

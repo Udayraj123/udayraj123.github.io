@@ -768,4 +768,113 @@ main {
   .volume-slider {
     width: 90px;
   }
+
+  /* Audio Prompt - appears on page load to encourage interaction */
+  .audio-prompt {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    background: rgba(171, 157, 242, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 24px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: audioPromptPulse 2s ease-in-out infinite;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .audio-prompt.hidden {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+    pointer-events: none;
+  }
+
+  .audio-prompt-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .audio-prompt-content i {
+    font-size: 24px;
+    animation: musicNote 1.5s ease-in-out infinite;
+  }
+
+  @keyframes audioPromptPulse {
+    0%, 100% {
+      box-shadow: 0 10px 40px rgba(171, 157, 242, 0.4);
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      box-shadow: 0 10px 60px rgba(171, 157, 242, 0.6);
+      transform: translate(-50%, -50%) scale(1.05);
+    }
+  }
+
+  @keyframes musicNote {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-3px) rotate(-5deg);
+    }
+    75% {
+      transform: translateY(-3px) rotate(5deg);
+    }
+  }
+
+  /* Cat Meow Toggle Button */
+  .cat-meow-toggle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.4);
+    color: white;
+    cursor: pointer;
+    position: relative;
+    display: grid;
+    place-items: center;
+    transition: all 0.3s ease;
+  }
+
+  .cat-meow-toggle:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.6);
+    transform: scale(1.1);
+  }
+
+  .cat-meow-toggle.active {
+    background: rgba(255,182,193,0.3);
+    border-color: rgba(255,182,193,0.8);
+    color: #ffb6c1;
+  }
+
+  .cat-meow-toggle.active:hover {
+    background: rgba(255,182,193,0.4);
+  }
+
+  .cat-meow-toggle i {
+    font-size: 14px;
+  }
+
+  .cat-meow-toggle.active i {
+    animation: meow-bounce 0.6s ease-in-out infinite;
+  }
+
+  @keyframes meow-bounce {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
   
