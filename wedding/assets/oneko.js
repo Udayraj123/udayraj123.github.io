@@ -10,8 +10,8 @@
   const nekoEl = document.createElement("div");
   let nekoEl2 = document.createElement("div");
 
-  let nekoPosX = 300;
-  let nekoPosY = 200;
+  let nekoPosX = 250;
+  let nekoPosY = 20;
 
   let mousePosX = 0;
   let mousePosY = 0;

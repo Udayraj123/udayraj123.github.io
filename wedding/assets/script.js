@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
     // ⏱️ Try after 5 seconds (will only work if muted autoplay succeeded)
-    setTimeout(startAudio, 5000);
+    setTimeout(startAudio, 10000);
   
     // 🎚️ Toggle button
     toggle.addEventListener('click', () => {
