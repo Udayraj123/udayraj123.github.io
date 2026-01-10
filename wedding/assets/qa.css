@@ -1,5 +1,5 @@
 .wedding-qa {
-    padding: 60px 10px;
+    padding: 20px 10px;
     background: linear-gradient(
       to bottom,
       rgba(214, 201, 137, 0.08),
@@ -66,7 +66,7 @@
   /* Mobile */
   @media (max-width: 768px) {
     .wedding-qa {
-      padding: 90px 20px;
+      padding: 20px 20px;
     }
   
     .qa-header h2 {

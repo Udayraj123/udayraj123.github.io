@@ -115,7 +115,7 @@
       nekoFile = curScript.dataset.cat
     }
     nekoEl.style.backgroundImage = `url(${nekoFile})`;
-    nekoEl.style.transform = `scale(1.75)`;
+    nekoEl.style.transform = `scale(1.6)`;
     nekoEl2 = nekoEl.cloneNode(true);
     nekoEl2.id = "neko2";
     // Use the inverted black sprite for nekoEl2

@@ -728,7 +728,7 @@ main {
 
 .audio-controls {
     position: fixed;
-    bottom: 25px;
+    bottom: 10px;
     right: 25px;
     z-index: 9999;
     display: flex;
@@ -741,8 +741,8 @@ main {
   }
   
   .audio-toggle {
-    width: 42px;
-    height: 42px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background: transparent;
     border: 1px solid rgba(255,255,255,0.4);
