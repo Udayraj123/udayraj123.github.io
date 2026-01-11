@@ -258,16 +258,16 @@
       idleAnimation == null
     ) {
       let avalibleIdleAnimations = ["sleeping", "scratchSelf"];
-      if (nekoPosX < 82) {
+      if (nekoPosX < 150) {
         avalibleIdleAnimations.push("scratchWallW");
       }
-      if (nekoPosY < 82) {
+      if (nekoPosY < 150) {
         avalibleIdleAnimations.push("scratchWallN");
       }
-      if (nekoPosX > window.innerWidth - 82) {
+      if (nekoPosX > window.innerWidth - 150) {
         avalibleIdleAnimations.push("scratchWallE");
       }
-      if (nekoPosY > window.innerHeight - 82) {
+      if (nekoPosY > window.innerHeight - 150) {
         avalibleIdleAnimations.push("scratchWallS");
       }
       idleAnimation =
