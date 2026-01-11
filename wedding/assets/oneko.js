@@ -22,12 +22,12 @@
   let idleAnimationFrame = 0;
 
   const nekoSpeed = 10;
-  
+
   // Add subtle motion randomization for more natural movement
   let wobbleOffset = { x: 0, y: 0 };
   let wobbleOffset2 = { x: 0, y: 0 };
   let wobbleTime = 0;
-  
+
   // Dynamic separation between cats
   let neko2OffsetX = 5; // Start close
   const neko2OffsetXMoving = 30; // Distance when moving
@@ -109,17 +109,17 @@
     nekoEl.style.zIndex = Number.MAX_VALUE;
     nekoEl.style.cursor = "pointer";
 
-    let nekoFile = "./assets/oneko.gif"
+    let nekoFile = "./assets/oneko.gif";
     let nekoFile2 = "./assets/oneko-black.gif";
-    const curScript = document.currentScript
+    const curScript = document.currentScript;
     if (curScript && curScript.dataset.cat) {
-      nekoFile = curScript.dataset.cat
+      nekoFile = curScript.dataset.cat;
     }
     nekoEl.style.backgroundImage = `url(${nekoFile})`;
     nekoEl.style.transform = `scale(1.6)`;
     nekoEl2 = nekoEl.cloneNode(true);
     nekoEl2.id = "neko2";
-    nekoEl2.style.zIndex = nekoEl.style.zIndex -1;
+    nekoEl2.style.zIndex = nekoEl.style.zIndex - 1;
     // Use the inverted black sprite for nekoEl2
     nekoEl2.style.backgroundImage = `url(${nekoFile2})`;
 
@@ -145,8 +145,8 @@
       lastFrameTimestamp = timestamp;
     }
     if (timestamp - lastFrameTimestamp > 100) {
-      lastFrameTimestamp = timestamp
-      frame()
+      lastFrameTimestamp = timestamp;
+      frame();
     }
     window.requestAnimationFrame(onAnimationFrame);
   }
@@ -154,7 +154,9 @@
   function setSprite(name, frame) {
     const sprite = spriteSets[name][frame % spriteSets[name].length];
     nekoEl.style.backgroundPosition = `${sprite[0] * 32}px ${sprite[1] * 32}px`;
-    nekoEl2.style.backgroundPosition = `${sprite[0] * 32}px ${sprite[1] * 32}px`;
+    nekoEl2.style.backgroundPosition = `${sprite[0] * 32}px ${
+      sprite[1] * 32
+    }px`;
   }
 
   function resetIdleAnimation() {
@@ -186,7 +188,7 @@
       }
       idleAnimation =
         avalibleIdleAnimations[
-        Math.floor(Math.random() * avalibleIdleAnimations.length)
+          Math.floor(Math.random() * avalibleIdleAnimations.length)
         ];
     }
 
@@ -227,14 +229,16 @@
     const centerY = rect.top + rect.height / 2 + scrollTop;
 
     for (let i = 0; i < 10; i++) {
-      const heart = document.createElement('div');
-      heart.className = 'heart';
-      heart.textContent = '❤';
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.textContent = "❤";
       const offsetX = (Math.random() - 0.5) * 50;
       const offsetY = (Math.random() - 0.5) * 50;
       heart.style.left = `${centerX + offsetX - 16}px`;
       heart.style.top = `${centerY + offsetY - 16}px`;
-      heart.style.transform = `translate(-50%, -50%) rotate(${Math.random() * 360}deg)`;
+      heart.style.transform = `translate(-50%, -50%) rotate(${
+        Math.random() * 360
+      }deg)`;
       parent.appendChild(heart);
 
       setTimeout(() => {
@@ -243,7 +247,7 @@
     }
   }
 
-  const style = document.createElement('style');
+  const style = document.createElement("style");
   style.innerHTML = `
 		  @keyframes heartBurst {
 			  0% { transform: scale(0); opacity: 1; }
@@ -259,32 +263,34 @@
 	  `;
 
   document.head.appendChild(style);
-  
+  window.tapCounter = 3;
   // When neko is clicked, explode hearts AND play Romeo's meow!
-  nekoEl.addEventListener('click', function() {
-    explodeHearts();
+  nekoEl.addEventListener("click", function () {
+    window.tapCounter--;
     // Trigger Romeo's meow if the function is available
-    if (typeof window.playRomeoMeow === 'function') {
+    if (window.tapCounter < 0 && typeof window.playRomeoMeow === "function") {
+      explodeHearts();
       window.playRomeoMeow();
     } else {
-      console.log('playRomeoMeow not available yet');
+      console.log("playRomeoMeow not available yet");
     }
   });
-  
+
   // Also make the second cat clickable
-  nekoEl2.addEventListener('click', function() {
-    explodeHearts();
+  nekoEl2.addEventListener("click", function () {
+    window.tapCounter--;
     // Trigger Romeo's meow if the function is available
-    if (typeof window.playRomeoMeow === 'function') {
+    if (window.tapCounter < 0 && typeof window.playRomeoMeow === "function") {
+      explodeHearts();
       window.playRomeoMeow();
     } else {
-      console.log('playRomeoMeow not available yet');
+      console.log("playRomeoMeow not available yet");
     }
   });
 
   function frame() {
     frameCount += 1;
-    
+
     const diffX = nekoPosX - mousePosX;
     const diffY = nekoPosY - mousePosY;
     const distance = Math.sqrt(diffX ** 2 + diffY ** 2);
@@ -295,10 +301,10 @@
       wobbleOffset.y *= 0.85;
       wobbleOffset2.x *= 0.85;
       wobbleOffset2.y *= 0.85;
-      
+
       // Smoothly bring cats closer together when idle
       neko2OffsetX += (neko2OffsetXIdle - neko2OffsetX) * 0.15;
-      
+
       idle();
       return;
     }
@@ -312,10 +318,10 @@
       wobbleOffset.y *= 0.85;
       wobbleOffset2.x *= 0.85;
       wobbleOffset2.y *= 0.85;
-      
+
       // Also bring cats closer while alert
       neko2OffsetX += (neko2OffsetXIdle - neko2OffsetX) * 0.15;
-      
+
       setSprite("alert", 0);
       // count down after being alerted before moving
       idleTime = Math.min(idleTime, 7);
@@ -325,7 +331,7 @@
 
     // Only update wobble when actually moving
     wobbleTime += 1;
-    
+
     // Smoothly increase distance when moving
     neko2OffsetX += (neko2OffsetXMoving - neko2OffsetX) * 0.15;
     const wobbleStrength = 5;
@@ -333,10 +339,12 @@
     const wobbleSpeed = 0.35;
     wobbleOffset.x = Math.sin(wobbleTime * wobbleSpeed) * wobbleStrength;
     wobbleOffset.y = Math.cos(wobbleTime * wobbleSpeed * 0.8) * wobbleStrengthY;
-    
+
     // Second cat has slightly different wobble pattern
-    wobbleOffset2.x = Math.sin(wobbleTime * wobbleSpeed * 1.1 + 1) * wobbleStrength * 1.2;
-    wobbleOffset2.y = Math.cos(wobbleTime * wobbleSpeed * 0.9 + 0.5) * wobbleStrengthY * 1.2;
+    wobbleOffset2.x =
+      Math.sin(wobbleTime * wobbleSpeed * 1.1 + 1) * wobbleStrength * 1.2;
+    wobbleOffset2.y =
+      Math.cos(wobbleTime * wobbleSpeed * 0.9 + 0.5) * wobbleStrengthY * 1.2;
 
     let direction;
     direction = diffY / distance > 0.5 ? "N" : "";
