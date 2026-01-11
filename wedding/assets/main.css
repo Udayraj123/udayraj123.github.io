@@ -430,24 +430,29 @@ main {
     font-family: cursive;
     font-size: 4rem;
     font-weight: bold;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 4px 20px rgba(255, 255, 255, 0.5);
     letter-spacing: 2px;
-    background: #fb415d;
+    color: #fb415d;
     /* linear-gradient(45deg, #ffffff, #ffffff); */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
     margin: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Wedding Message */
 .wedding-message {
     margin-bottom: 30px;
 }
-
+.white-bg-shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
+    background-color: rgba(255, 255, 255, 0.75);
+}
 .message-text {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-family: cursive;
     color: #ff4455;
     /* letter-spacing: 8px; */
     /* text-transform: uppercase; */

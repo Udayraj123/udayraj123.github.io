@@ -11,7 +11,7 @@
   let nekoEl2 = document.createElement("div");
 
   let nekoPosX = 250;
-  let nekoPosY = 20;
+  let nekoPosY = 40;
 
   let mousePosX = 0;
   let mousePosY = 0;
@@ -95,6 +95,82 @@
     ],
   };
 
+  // Create RPG-style speech bubble
+  const speechBubble = document.createElement("div");
+  speechBubble.id="speechBubble";
+  speechBubble.textContent = "Tap anywhere";
+  speechBubble.style.cssText = `
+    position: fixed;
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    font-weight: bold;
+    color: #000;
+    background: #fff;
+    padding: 2px 5px;
+    box-shadow: rgb(0, 0, 0) 4px 4px 0px;
+    border-radius: 0;
+    pointer-events: none;
+    z-index: 10001;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    image-rendering: pixelated;
+  `;
+
+  // Add arrow/pointer style
+  const bubbleStyle = document.createElement('style');
+  bubbleStyle.textContent = `
+    #speechBubble::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #000;
+    }
+    #speechBubble::after {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-bottom: 4px solid #fff;
+    }
+  `;
+  document.head.appendChild(bubbleStyle);
+  
+  let bubbleVisible = false;
+
+  window.bubbleShownCount = 0;
+  function hideSpeechBubble() {
+    speechBubble.style.opacity = '0';
+    bubbleVisible = false;
+  }
+
+  function showSpeechBubble() {
+    if (!bubbleVisible) {
+      speechBubble.style.opacity = '1';
+      window.bubbleShownCount++;
+      bubbleVisible = true;
+      setTimeout(hideSpeechBubble, 2000);
+    }
+  }
+  function updateSpeechBubblePosition() {
+    if (bubbleVisible) {
+      // Position below the first cat
+      speechBubble.style.left = `${nekoPosX - 12}px`;
+      speechBubble.style.top = `${nekoPosY + 40}px`;
+    }
+  }
+
   function init() {
     nekoEl.id = "oneko";
     nekoEl.ariaHidden = true;
@@ -106,7 +182,7 @@
     nekoEl.style.imageRendering = "pixelated";
     nekoEl.style.left = `${nekoPosX - 16}px`;
     nekoEl.style.top = `${nekoPosY - 16}px`;
-    nekoEl.style.zIndex = Number.MAX_VALUE;
+    nekoEl.style.zIndex = 10000;
     nekoEl.style.cursor = "pointer";
 
     let nekoFile = "./assets/oneko.gif";
@@ -125,10 +201,12 @@
 
     document.body.appendChild(nekoEl);
     document.body.appendChild(nekoEl2);
+    document.body.appendChild(speechBubble);
 
     document.addEventListener("mousemove", function (event) {
       mousePosX = event.clientX;
       mousePosY = event.clientY;
+      hideSpeechBubble();
     });
 
     window.requestAnimationFrame(onAnimationFrame);
@@ -166,6 +244,12 @@
 
   function idle() {
     idleTime += 1;
+
+    // Show speech bubble once after being idle for a while
+    if (idleTime > 7 && window.bubbleShownCount < 1) {
+      showSpeechBubble();
+      updateSpeechBubblePosition();
+    }
 
     // every ~ 20 seconds
     if (
@@ -263,12 +347,12 @@
 	  `;
 
   document.head.appendChild(style);
-  window.tapCounter = 3;
+  window.nekoTaps = 3;
   // When neko is clicked, explode hearts AND play Romeo's meow!
   nekoEl.addEventListener("click", function () {
-    window.tapCounter--;
+    window.nekoTaps--;
     // Trigger Romeo's meow if the function is available
-    if (window.tapCounter < 0 && typeof window.playRomeoMeow === "function") {
+    if (window.nekoTaps < 0 && typeof window.playRomeoMeow === "function") {
       explodeHearts();
       window.playRomeoMeow();
     } else {
@@ -278,9 +362,9 @@
 
   // Also make the second cat clickable
   nekoEl2.addEventListener("click", function () {
-    window.tapCounter--;
+    window.nekoTaps--;
     // Trigger Romeo's meow if the function is available
-    if (window.tapCounter < 0 && typeof window.playRomeoMeow === "function") {
+    if (window.nekoTaps < 0 && typeof window.playRomeoMeow === "function") {
       explodeHearts();
       window.playRomeoMeow();
     } else {
