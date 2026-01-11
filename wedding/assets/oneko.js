@@ -159,6 +159,11 @@
     if (!bubbleVisible) {
       speechBubble.style.opacity = '1';
       window.bubbleShownCount++;
+      if(window.bubbleShownCount % 2 == 0){
+        speechBubble.textContent = "Keep tapping to hear us meow!";
+      } else {
+        speechBubble.textContent = "Tap anywhere (volume up)";
+      }
       bubbleVisible = true;
       setTimeout(hideSpeechBubble, 2000);
     }
@@ -246,18 +251,18 @@
     idleTime += 1;
 
     // Show speech bubble once after being idle for a while
-    if (idleTime > 7 && window.bubbleShownCount < 1) {
+    if (idleTime > 7 && window.bubbleShownCount < 3) {
       showSpeechBubble();
       updateSpeechBubblePosition();
     }
 
-    // every ~ 20 seconds
+    // every ~ 10 seconds
     if (
       idleTime > 10 &&
-      Math.floor(Math.random() * 200) == 0 &&
+      Math.floor(Math.random() * 100) == 0 &&
       idleAnimation == null
     ) {
-      let avalibleIdleAnimations = ["sleeping", "scratchSelf"];
+      let avalibleIdleAnimations = ["scratchSelf", "sleeping"];
       if (nekoPosX < 150) {
         avalibleIdleAnimations.push("scratchWallW");
       }
