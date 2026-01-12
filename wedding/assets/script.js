@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Debounced reset function - stops audio after user stops clicking
-  const debouncedReset = debounce(resetAfterMeow, 1500 + Math.round(Math.random() * 2000));
+  const debouncedReset = debounce(resetAfterMeow, 3000 + Math.round(Math.random() * 2000));
 
   // Expose play function globally for oneko.js to call
   window.playRomeoMeow = function() {
