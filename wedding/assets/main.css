@@ -555,7 +555,8 @@ main {
 
 /* Circular Countdown */
 .circular-countdown-video {
-    display: flex;
+    /* display: flex; hide the countdown for now */
+    display: none; 
     justify-content: center;
     gap: 30px;
     margin-top: 35px;
